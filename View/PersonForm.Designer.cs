@@ -1,0 +1,182 @@
+﻿namespace View
+{
+    partial class PersonForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblBirthYear = new System.Windows.Forms.Label();
+            this.lblSex = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblEmailAddress = new System.Windows.Forms.Label();
+            this.txtbxFirstName = new System.Windows.Forms.TextBox();
+            this.txtbxLastName = new System.Windows.Forms.TextBox();
+            this.txtbxBirthYear = new System.Windows.Forms.TextBox();
+            this.txtbxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtbxEmailAddress = new System.Windows.Forms.TextBox();
+            this.cmbbxSex = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(75, 103);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(63, 13);
+            this.lblFirstName.TabIndex = 0;
+            this.lblFirstName.Text = "First Name: ";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(75, 129);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(64, 13);
+            this.lblLastName.TabIndex = 1;
+            this.lblLastName.Text = "Last Name: ";
+            // 
+            // lblBirthYear
+            // 
+            this.lblBirthYear.AutoSize = true;
+            this.lblBirthYear.Location = new System.Drawing.Point(75, 159);
+            this.lblBirthYear.Name = "lblBirthYear";
+            this.lblBirthYear.Size = new System.Drawing.Size(56, 13);
+            this.lblBirthYear.TabIndex = 2;
+            this.lblBirthYear.Text = "Birth Year:";
+            // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Location = new System.Drawing.Point(75, 189);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(31, 13);
+            this.lblSex.TabIndex = 3;
+            this.lblSex.Text = "Sex: ";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(75, 214);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(81, 13);
+            this.lblPhoneNumber.TabIndex = 4;
+            this.lblPhoneNumber.Text = "Phone Number:";
+            // 
+            // lblEmailAddress
+            // 
+            this.lblEmailAddress.AutoSize = true;
+            this.lblEmailAddress.Location = new System.Drawing.Point(75, 246);
+            this.lblEmailAddress.Name = "lblEmailAddress";
+            this.lblEmailAddress.Size = new System.Drawing.Size(73, 13);
+            this.lblEmailAddress.TabIndex = 5;
+            this.lblEmailAddress.Text = "Email Address";
+            // 
+            // txtbxFirstName
+            // 
+            this.txtbxFirstName.Location = new System.Drawing.Point(153, 100);
+            this.txtbxFirstName.Name = "txtbxFirstName";
+            this.txtbxFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxFirstName.TabIndex = 6;
+            // 
+            // txtbxLastName
+            // 
+            this.txtbxLastName.Location = new System.Drawing.Point(153, 126);
+            this.txtbxLastName.Name = "txtbxLastName";
+            this.txtbxLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxLastName.TabIndex = 7;
+            // 
+            // txtbxBirthYear
+            // 
+            this.txtbxBirthYear.Location = new System.Drawing.Point(153, 152);
+            this.txtbxBirthYear.Name = "txtbxBirthYear";
+            this.txtbxBirthYear.Size = new System.Drawing.Size(100, 20);
+            this.txtbxBirthYear.TabIndex = 8;
+            // 
+            // txtbxPhoneNumber
+            // 
+            this.txtbxPhoneNumber.Location = new System.Drawing.Point(172, 211);
+            this.txtbxPhoneNumber.Name = "txtbxPhoneNumber";
+            this.txtbxPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPhoneNumber.TabIndex = 9;
+            // 
+            // txtbxEmailAddress
+            // 
+            this.txtbxEmailAddress.Location = new System.Drawing.Point(172, 243);
+            this.txtbxEmailAddress.Name = "txtbxEmailAddress";
+            this.txtbxEmailAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtbxEmailAddress.TabIndex = 10;
+            // 
+            // cmbbxSex
+            // 
+            this.cmbbxSex.FormattingEnabled = true;
+            this.cmbbxSex.Location = new System.Drawing.Point(151, 181);
+            this.cmbbxSex.Name = "cmbbxSex";
+            this.cmbbxSex.Size = new System.Drawing.Size(121, 21);
+            this.cmbbxSex.TabIndex = 11;
+            // 
+            // PersonForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(917, 490);
+            this.Controls.Add(this.cmbbxSex);
+            this.Controls.Add(this.txtbxEmailAddress);
+            this.Controls.Add(this.txtbxPhoneNumber);
+            this.Controls.Add(this.txtbxBirthYear);
+            this.Controls.Add(this.txtbxLastName);
+            this.Controls.Add(this.txtbxFirstName);
+            this.Controls.Add(this.lblEmailAddress);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.lblSex);
+            this.Controls.Add(this.lblBirthYear);
+            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.lblFirstName);
+            this.Name = "PersonForm";
+            this.Text = "PersonForm";
+            this.Load += new System.EventHandler(this.PersonForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblBirthYear;
+        private System.Windows.Forms.Label lblSex;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.Label lblEmailAddress;
+        private System.Windows.Forms.TextBox txtbxFirstName;
+        private System.Windows.Forms.TextBox txtbxLastName;
+        private System.Windows.Forms.TextBox txtbxBirthYear;
+        private System.Windows.Forms.TextBox txtbxPhoneNumber;
+        private System.Windows.Forms.TextBox txtbxEmailAddress;
+        private System.Windows.Forms.ComboBox cmbbxSex;
+    }
+}
