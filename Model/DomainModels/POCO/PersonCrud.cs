@@ -74,7 +74,7 @@ namespace Model.DomainModels.POCO
                 }
                 catch (ArgumentNullException)
                 {
-                    //////
+                    throw new ArgumentNullException();
                 }
                 catch (Exception ex)
                 {
@@ -89,9 +89,32 @@ namespace Model.DomainModels.POCO
                     }
                 }
             }
-        } 
+        }
         #endregion
 
-
+        #region [- Select() -]
+        public List<DTO.EF.Person> Select()
+        {
+            using (var context = new DTO.EF.StoreEntities())
+            {
+                try
+                {
+                    var q = context.People.ToList();
+                    return q;
+                }
+                catch (ArgumentNullException)
+                {
+                    throw new ArgumentNullException();
+                }
+                finally
+                {
+                    if (context != null)
+                    {
+                        context.Dispose();
+                    }
+                }
+            }
+        } 
+        #endregion
     }
 }
