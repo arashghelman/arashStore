@@ -8,19 +8,27 @@ namespace Model.DomainModels.POCO
 {
     public class PersonCrud
     {
+        #region [- ctor -]
         public PersonCrud()
         {
             Ref_Person = new DTO.EF.Person();
         }
-        public DTO.EF.Person Ref_Person { get; set; }
+        #endregion
 
+        #region [- props -]
+        public DTO.EF.Person Ref_Person { get; set; }
+        #endregion
+
+        #region [- public int CalculateAge(int birthYear) -]
         public int CalculateAge(int birthYear)
         {
             int currentYear = 2019;
             int age = currentYear - birthYear;
             return age;
         }
+        #endregion
 
+        #region [- Insert(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
         public void Insert(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
         {
             using (var context = new DTO.EF.StoreEntities())
@@ -38,18 +46,19 @@ namespace Model.DomainModels.POCO
                     context.People.Add(Ref_Person);
                     context.SaveChanges();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
                 finally
                 {
-                    if (context!=null)
+                    if (context != null)
                     {
                         context.Dispose();
                     }
                 }
-            }           
-        }
+            }
+        } 
+        #endregion
     }
 }
