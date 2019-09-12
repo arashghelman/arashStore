@@ -35,12 +35,38 @@ namespace View
         #region [- AssignToolTip() -]
         public void AssignToolTip()
         {
-            toolTip1.SetToolTip(txtbxFirstName, "Enter your first name \n You can only enter characters");
-            toolTip1.SetToolTip(txtbxLastName, "Enter your last name \n You can only enter characters");
-            toolTip1.SetToolTip(txtbxBirthYear, "Enter the year you were born \n You can only enter numbers");
+            toolTip1.SetToolTip(txtbxFirstName, "Enter your first name.");
+            toolTip1.SetToolTip(txtbxLastName, "Enter your last name.");
+            toolTip1.SetToolTip(txtbxBirthYear, "Enter the year you were born.");
             toolTip1.SetToolTip(cmbbxSex, "Select your gender");
-            toolTip1.SetToolTip(txtbxPhoneNumber, "Enter your phone number \n You can only enter numbers");
-            toolTip1.SetToolTip(txtbxEmailAddress, "Enter your email address");
+            toolTip1.SetToolTip(txtbxPhoneNumber, "Enter your phone number.");
+            toolTip1.SetToolTip(txtbxEmailAddress, "Enter your email address.");
+        }
+        #endregion
+
+        #region [- TxtbxFirstName_TextChanged -]
+        private void TxtbxFirstName_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtbxFirstName.Text;
+            bool hasDigit = false;
+            foreach (char letter in text)
+            {
+                if (char.IsDigit(letter))
+                {
+                    hasDigit = true;
+                }
+                if (hasDigit)
+                {
+                    string hint = "You should only enter characters!";
+                    lblError1.Text = hint;
+                    errorProvider1.SetError(txtbxFirstName, lblError1.Text);
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    lblError1.Text = string.Empty;
+                }
+            }
         }
         #endregion
 
@@ -63,7 +89,20 @@ namespace View
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
             dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
-        } 
+        }
         #endregion
+
+        //public void DetectEachChar(string text)
+        //{
+        //    bool hasDigit = false;
+        //    foreach (char letter in text)
+        //    {
+        //        if (char.IsDigit(letter))
+        //        {
+        //            hasDigit = true;
+        //        }
+        //    }
+        //}
+
     }
 }

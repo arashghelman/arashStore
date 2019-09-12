@@ -48,7 +48,10 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvPerson = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblError1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -111,6 +114,7 @@
             this.txtbxFirstName.Name = "txtbxFirstName";
             this.txtbxFirstName.Size = new System.Drawing.Size(100, 20);
             this.txtbxFirstName.TabIndex = 6;
+            this.txtbxFirstName.TextChanged += new System.EventHandler(this.TxtbxFirstName_TextChanged);
             // 
             // txtbxLastName
             // 
@@ -194,11 +198,25 @@
             this.dgvPerson.Size = new System.Drawing.Size(240, 150);
             this.dgvPerson.TabIndex = 16;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
+            // 
+            // lblError1
+            // 
+            this.lblError1.AutoSize = true;
+            this.lblError1.Location = new System.Drawing.Point(234, 46);
+            this.lblError1.Name = "lblError1";
+            this.lblError1.Size = new System.Drawing.Size(0, 13);
+            this.lblError1.TabIndex = 17;
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 490);
+            this.Controls.Add(this.lblError1);
             this.Controls.Add(this.dgvPerson);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnUpdate);
@@ -221,6 +239,7 @@
             this.Text = "PersonForm";
             this.Load += new System.EventHandler(this.PersonForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +265,7 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvPerson;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label lblError1;
     }
 }
