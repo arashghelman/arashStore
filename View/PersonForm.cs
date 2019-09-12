@@ -92,7 +92,7 @@ namespace View
         }
         #endregion
 
-        //public void DetectEachChar(string text)
+        //public void DetectEachChar(string text, string hint)
         //{
         //    bool hasDigit = false;
         //    foreach (char letter in text)
@@ -101,8 +101,16 @@ namespace View
         //        {
         //            hasDigit = true;
         //        }
+        //        if (hasDigit)
+        //        {
+        //            hint = "You should only enter characters!";
+        //            errorProvider1.SetError(,hint);
+        //        }
+        //        else
+        //        {
+        //            errorProvider1.Clear();
+        //        }
         //    }
         //}
-
     }
 }
