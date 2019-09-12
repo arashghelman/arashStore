@@ -58,7 +58,40 @@ namespace Model.DomainModels.POCO
                     }
                 }
             }
+        }
+        #endregion
+
+        #region [- Delete() -]
+        public void Delete()
+        {
+            using (var context = new DTO.EF.StoreEntities())
+            {
+                try
+                {
+                    var q = context.People.FirstOrDefault();
+                    context.People.Remove(q);
+                    context.SaveChanges();
+                }
+                catch (ArgumentNullException)
+                {
+                    //////
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (context != null)
+                    {
+                        context.Dispose();
+                    }
+                }
+            }
         } 
         #endregion
+
+
     }
 }
