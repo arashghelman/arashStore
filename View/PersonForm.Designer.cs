@@ -49,7 +49,8 @@
             this.dgvPerson = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblError1 = new System.Windows.Forms.Label();
+            this.lblErrorFirstName = new System.Windows.Forms.Label();
+            this.lblErrorLastName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +123,7 @@
             this.txtbxLastName.Name = "txtbxLastName";
             this.txtbxLastName.Size = new System.Drawing.Size(100, 20);
             this.txtbxLastName.TabIndex = 7;
+            this.txtbxLastName.TextChanged += new System.EventHandler(this.TxtbxLastName_TextChanged);
             // 
             // txtbxBirthYear
             // 
@@ -170,6 +172,7 @@
             this.btnRemove.TabIndex = 13;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // btnUpdate
             // 
@@ -195,7 +198,7 @@
             this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerson.Location = new System.Drawing.Point(85, 262);
             this.dgvPerson.Name = "dgvPerson";
-            this.dgvPerson.Size = new System.Drawing.Size(240, 150);
+            this.dgvPerson.Size = new System.Drawing.Size(559, 150);
             this.dgvPerson.TabIndex = 16;
             // 
             // errorProvider1
@@ -203,20 +206,29 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
-            // lblError1
+            // lblErrorFirstName
             // 
-            this.lblError1.AutoSize = true;
-            this.lblError1.Location = new System.Drawing.Point(234, 46);
-            this.lblError1.Name = "lblError1";
-            this.lblError1.Size = new System.Drawing.Size(0, 13);
-            this.lblError1.TabIndex = 17;
+            this.lblErrorFirstName.AutoSize = true;
+            this.lblErrorFirstName.Location = new System.Drawing.Point(234, 46);
+            this.lblErrorFirstName.Name = "lblErrorFirstName";
+            this.lblErrorFirstName.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorFirstName.TabIndex = 17;
+            // 
+            // lblErrorLastName
+            // 
+            this.lblErrorLastName.AutoSize = true;
+            this.lblErrorLastName.Location = new System.Drawing.Point(234, 72);
+            this.lblErrorLastName.Name = "lblErrorLastName";
+            this.lblErrorLastName.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorLastName.TabIndex = 18;
             // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 490);
-            this.Controls.Add(this.lblError1);
+            this.Controls.Add(this.lblErrorLastName);
+            this.Controls.Add(this.lblErrorFirstName);
             this.Controls.Add(this.dgvPerson);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnUpdate);
@@ -266,6 +278,7 @@
         private System.Windows.Forms.DataGridView dgvPerson;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label lblError1;
+        private System.Windows.Forms.Label lblErrorFirstName;
+        private System.Windows.Forms.Label lblErrorLastName;
     }
 }

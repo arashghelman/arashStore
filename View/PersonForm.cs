@@ -33,7 +33,7 @@ namespace View
         #endregion
 
         #region [- AssignToolTip() -]
-        public void AssignToolTip()
+        private void AssignToolTip()
         {
             toolTip1.SetToolTip(txtbxFirstName, "Enter your first name.");
             toolTip1.SetToolTip(txtbxLastName, "Enter your last name.");
@@ -58,16 +58,42 @@ namespace View
                 if (hasDigit)
                 {
                     string hint = "You should only enter characters!";
-                    lblError1.Text = hint;
-                    errorProvider1.SetError(txtbxFirstName, lblError1.Text);
+                    lblErrorFirstName.Text = hint;
+                    errorProvider1.SetError(txtbxFirstName, lblErrorFirstName.Text);
                 }
                 else
                 {
                     errorProvider1.Clear();
-                    lblError1.Text = string.Empty;
+                    lblErrorFirstName.Text = string.Empty;
                 }
             }
         }
+        #endregion
+
+        #region [- TxtbxLastName_TextChanged -]
+        private void TxtbxLastName_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtbxLastName.Text;
+            bool hasDigit = false;
+            foreach (char letter in text)
+            {
+                if (char.IsDigit(letter))
+                {
+                    hasDigit = true;
+                }
+                if (hasDigit)
+                {
+                    string hint = "You should only enter characters!";
+                    lblErrorLastName.Text = hint;
+                    errorProvider1.SetError(txtbxLastName, lblErrorLastName.Text);
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    lblErrorLastName.Text = string.Empty;
+                }
+            }
+        } 
         #endregion
 
         #region [- BtnAdd_Click -]
@@ -91,6 +117,16 @@ namespace View
             dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
         }
         #endregion
+
+        #region [- BtnRemove_Click -]
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            Ref_PersonViewModel.Remove();
+        }
+        #endregion
+
+
+
 
         //public void DetectEachChar(string text, string hint)
         //{
