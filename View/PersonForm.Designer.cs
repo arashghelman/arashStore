@@ -54,6 +54,7 @@
             this.lblErrorBirthYear = new System.Windows.Forms.Label();
             this.lblErrorPhoneNumber = new System.Windows.Forms.Label();
             this.lblErrorEmailAddress = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -251,11 +252,22 @@
             this.lblErrorEmailAddress.Size = new System.Drawing.Size(0, 13);
             this.lblErrorEmailAddress.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(113, 297);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 490);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblErrorEmailAddress);
             this.Controls.Add(this.lblErrorPhoneNumber);
             this.Controls.Add(this.lblErrorBirthYear);
@@ -315,5 +327,6 @@
         private System.Windows.Forms.Label lblErrorBirthYear;
         private System.Windows.Forms.Label lblErrorPhoneNumber;
         private System.Windows.Forms.Label lblErrorEmailAddress;
+        private System.Windows.Forms.Button button1;
     }
 }

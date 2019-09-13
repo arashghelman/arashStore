@@ -37,6 +37,10 @@
             this.txtbxDiscount = new System.Windows.Forms.TextBox();
             this.txtbxUnitPrice = new System.Windows.Forms.TextBox();
             this.nmrcUpDwnQuantity = new System.Windows.Forms.NumericUpDown();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.fileDialogUpload = new System.Windows.Forms.OpenFileDialog();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblFileName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnQuantity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +56,7 @@
             // lblImage
             // 
             this.lblImage.AutoSize = true;
-            this.lblImage.Location = new System.Drawing.Point(72, 117);
+            this.lblImage.Location = new System.Drawing.Point(32, 200);
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(81, 13);
             this.lblImage.TabIndex = 1;
@@ -61,7 +65,7 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(72, 142);
+            this.lblQuantity.Location = new System.Drawing.Point(43, 119);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(49, 13);
             this.lblQuantity.TabIndex = 2;
@@ -70,7 +74,7 @@
             // lblUnitPrice
             // 
             this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(72, 167);
+            this.lblUnitPrice.Location = new System.Drawing.Point(43, 144);
             this.lblUnitPrice.Name = "lblUnitPrice";
             this.lblUnitPrice.Size = new System.Drawing.Size(56, 13);
             this.lblUnitPrice.TabIndex = 3;
@@ -79,7 +83,7 @@
             // lblDiscount
             // 
             this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(72, 192);
+            this.lblDiscount.Location = new System.Drawing.Point(43, 169);
             this.lblDiscount.Name = "lblDiscount";
             this.lblDiscount.Size = new System.Drawing.Size(55, 13);
             this.lblDiscount.TabIndex = 4;
@@ -94,21 +98,21 @@
             // 
             // txtbxDiscount
             // 
-            this.txtbxDiscount.Location = new System.Drawing.Point(148, 189);
+            this.txtbxDiscount.Location = new System.Drawing.Point(119, 166);
             this.txtbxDiscount.Name = "txtbxDiscount";
             this.txtbxDiscount.Size = new System.Drawing.Size(100, 20);
             this.txtbxDiscount.TabIndex = 8;
             // 
             // txtbxUnitPrice
             // 
-            this.txtbxUnitPrice.Location = new System.Drawing.Point(148, 164);
+            this.txtbxUnitPrice.Location = new System.Drawing.Point(119, 141);
             this.txtbxUnitPrice.Name = "txtbxUnitPrice";
             this.txtbxUnitPrice.Size = new System.Drawing.Size(100, 20);
             this.txtbxUnitPrice.TabIndex = 9;
             // 
             // nmrcUpDwnQuantity
             // 
-            this.nmrcUpDwnQuantity.Location = new System.Drawing.Point(148, 135);
+            this.nmrcUpDwnQuantity.Location = new System.Drawing.Point(119, 112);
             this.nmrcUpDwnQuantity.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -118,11 +122,49 @@
             this.nmrcUpDwnQuantity.Size = new System.Drawing.Size(100, 20);
             this.nmrcUpDwnQuantity.TabIndex = 10;
             // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(119, 192);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(100, 23);
+            this.btnUpload.TabIndex = 11;
+            this.btnUpload.Text = "Browse";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.BtnUpload_Click);
+            // 
+            // fileDialogUpload
+            // 
+            this.fileDialogUpload.FileName = "openFileDialog1";
+            this.fileDialogUpload.Filter = "\"JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*\"";
+            this.fileDialogUpload.FilterIndex = 2;
+            this.fileDialogUpload.InitialDirectory = "@\"C:\\\"";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(217, 333);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Location = new System.Drawing.Point(116, 218);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(0, 13);
+            this.lblFileName.TabIndex = 13;
+            // 
             // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 418);
+            this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.nmrcUpDwnQuantity);
             this.Controls.Add(this.txtbxUnitPrice);
             this.Controls.Add(this.txtbxDiscount);
@@ -151,5 +193,9 @@
         private System.Windows.Forms.TextBox txtbxDiscount;
         private System.Windows.Forms.TextBox txtbxUnitPrice;
         private System.Windows.Forms.NumericUpDown nmrcUpDwnQuantity;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.OpenFileDialog fileDialogUpload;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblFileName;
     }
 }

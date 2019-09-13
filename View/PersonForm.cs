@@ -184,6 +184,12 @@ namespace View
         {
             Ref_PersonViewModel.Remove();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            ManagementForm Ref = new ManagementForm();
+            Ref.Show();
+        }
         #endregion
 
 
