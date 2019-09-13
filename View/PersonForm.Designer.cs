@@ -51,6 +51,9 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblErrorFirstName = new System.Windows.Forms.Label();
             this.lblErrorLastName = new System.Windows.Forms.Label();
+            this.lblErrorBirthYear = new System.Windows.Forms.Label();
+            this.lblErrorPhoneNumber = new System.Windows.Forms.Label();
+            this.lblErrorEmailAddress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +134,7 @@
             this.txtbxBirthYear.Name = "txtbxBirthYear";
             this.txtbxBirthYear.Size = new System.Drawing.Size(100, 20);
             this.txtbxBirthYear.TabIndex = 8;
+            this.txtbxBirthYear.TextChanged += new System.EventHandler(this.TxtbxBirthYear_TextChanged);
             // 
             // txtbxPhoneNumber
             // 
@@ -145,6 +149,7 @@
             this.txtbxEmailAddress.Name = "txtbxEmailAddress";
             this.txtbxEmailAddress.Size = new System.Drawing.Size(100, 20);
             this.txtbxEmailAddress.TabIndex = 10;
+            this.txtbxEmailAddress.TextChanged += new System.EventHandler(this.TxtbxEmailAddress_TextChanged);
             // 
             // cmbbxSex
             // 
@@ -222,11 +227,38 @@
             this.lblErrorLastName.Size = new System.Drawing.Size(0, 13);
             this.lblErrorLastName.TabIndex = 18;
             // 
+            // lblErrorBirthYear
+            // 
+            this.lblErrorBirthYear.AutoSize = true;
+            this.lblErrorBirthYear.Location = new System.Drawing.Point(234, 98);
+            this.lblErrorBirthYear.Name = "lblErrorBirthYear";
+            this.lblErrorBirthYear.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorBirthYear.TabIndex = 19;
+            // 
+            // lblErrorPhoneNumber
+            // 
+            this.lblErrorPhoneNumber.AutoSize = true;
+            this.lblErrorPhoneNumber.Location = new System.Drawing.Point(249, 157);
+            this.lblErrorPhoneNumber.Name = "lblErrorPhoneNumber";
+            this.lblErrorPhoneNumber.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorPhoneNumber.TabIndex = 20;
+            // 
+            // lblErrorEmailAddress
+            // 
+            this.lblErrorEmailAddress.AutoSize = true;
+            this.lblErrorEmailAddress.Location = new System.Drawing.Point(249, 189);
+            this.lblErrorEmailAddress.Name = "lblErrorEmailAddress";
+            this.lblErrorEmailAddress.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorEmailAddress.TabIndex = 21;
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 490);
+            this.Controls.Add(this.lblErrorEmailAddress);
+            this.Controls.Add(this.lblErrorPhoneNumber);
+            this.Controls.Add(this.lblErrorBirthYear);
             this.Controls.Add(this.lblErrorLastName);
             this.Controls.Add(this.lblErrorFirstName);
             this.Controls.Add(this.dgvPerson);
@@ -280,5 +312,8 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblErrorFirstName;
         private System.Windows.Forms.Label lblErrorLastName;
+        private System.Windows.Forms.Label lblErrorBirthYear;
+        private System.Windows.Forms.Label lblErrorPhoneNumber;
+        private System.Windows.Forms.Label lblErrorEmailAddress;
     }
 }

@@ -93,8 +93,68 @@ namespace View
                     lblErrorLastName.Text = string.Empty;
                 }
             }
+        }
+        #endregion
+
+        #region [- TxtbxBirthYear_TextChanged -]
+        private void TxtbxBirthYear_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtbxBirthYear.Text;
+            bool hasDigit = true;
+            foreach (char letter in text)
+            {
+                if (char.IsLetter(letter))
+                {
+                    hasDigit = false;
+                }
+                if (!hasDigit)
+                {
+                    string hint = "You should only enter numbers!";
+                    lblErrorBirthYear.Text = hint;
+                    errorProvider1.SetError(txtbxBirthYear, lblErrorBirthYear.Text);
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    lblErrorBirthYear.Text = string.Empty;
+                }
+            }
+        }
+        #endregion
+
+        #region [- TxtbxPhoneNumber_TextChanged -]
+        private void TxtbxPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            string text = txtbxPhoneNumber.Text;
+            bool hasDigit = true;
+            foreach (char letter in text)
+            {
+                if (char.IsLetter(letter))
+                {
+                    hasDigit = false;
+                }
+                if (!hasDigit)
+                {
+                    string hint = "You should only enter numbers!";
+                    lblErrorPhoneNumber.Text = hint;
+                    errorProvider1.SetError(txtbxPhoneNumber, lblErrorPhoneNumber.Text);
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    lblErrorPhoneNumber.Text = string.Empty;
+                }
+            }
+        }
+        #endregion
+
+        #region [- TxtbxEmailAddress_TextChanged -]
+        private void TxtbxEmailAddress_TextChanged(object sender, EventArgs e)
+        {
+
         } 
         #endregion
+
 
         #region [- BtnAdd_Click -]
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -148,5 +208,10 @@ namespace View
         //        }
         //    }
         //}
+
+        private void LblErrorPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
