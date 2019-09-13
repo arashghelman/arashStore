@@ -153,7 +153,7 @@ namespace View
         private void TxtbxEmailAddress_TextChanged(object sender, EventArgs e)
         {
             MailAddress m = new MailAddress(txtbxEmailAddress.Text);
-        } 
+        }
         #endregion
 
 

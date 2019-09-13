@@ -201,7 +201,7 @@
             // dgvPerson
             // 
             this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerson.Location = new System.Drawing.Point(346, 261);
+            this.dgvPerson.Location = new System.Drawing.Point(261, 260);
             this.dgvPerson.Name = "dgvPerson";
             this.dgvPerson.Size = new System.Drawing.Size(559, 150);
             this.dgvPerson.TabIndex = 16;
