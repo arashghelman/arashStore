@@ -142,6 +142,7 @@
             this.txtbxPhoneNumber.Name = "txtbxPhoneNumber";
             this.txtbxPhoneNumber.Size = new System.Drawing.Size(100, 20);
             this.txtbxPhoneNumber.TabIndex = 9;
+            this.txtbxPhoneNumber.Leave += new System.EventHandler(this.TxtbxPhoneNumber_Leave);
             // 
             // txtbxEmailAddress
             // 

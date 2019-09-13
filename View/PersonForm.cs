@@ -127,8 +127,8 @@ namespace View
         }
         #endregion
 
-        #region [- TxtbxPhoneNumber_TextChanged -]
-        private void TxtbxPhoneNumber_TextChanged(object sender, EventArgs e)
+        #region [- TxtbxPhoneNumber_Leave -]
+        private void TxtbxPhoneNumber_Leave(object sender, EventArgs e)
         {
             string text = txtbxPhoneNumber.Text;
             bool hasDigit = true;
@@ -216,6 +216,7 @@ namespace View
         {
             ManagementForm Ref = new ManagementForm();
             Ref.Show();
+        }      
         }
 
 
@@ -241,4 +242,5 @@ namespace View
         //}
 
     }
-}
+
+

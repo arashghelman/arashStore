@@ -97,6 +97,7 @@ namespace View
             return imageByte;
         }
         #endregion
+
         #endregion
 
         #region [- Manage People -]
