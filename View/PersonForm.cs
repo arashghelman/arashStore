@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
 
 namespace View
 {
@@ -151,7 +152,7 @@ namespace View
         #region [- TxtbxEmailAddress_TextChanged -]
         private void TxtbxEmailAddress_TextChanged(object sender, EventArgs e)
         {
-
+            MailAddress m = new MailAddress(txtbxEmailAddress.Text);
         } 
         #endregion
 
@@ -209,9 +210,5 @@ namespace View
         //    }
         //}
 
-        private void LblErrorPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
