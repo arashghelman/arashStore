@@ -31,28 +31,20 @@ namespace View
         private void ManagementForm_Load(object sender, EventArgs e)
         {
             cmbbxPersonSex.Items.AddRange(new string[] { "Male", "Female" });
-        } 
-        #endregion
-
-        #region [- DgvPerson_CellClick -]
-        private void DgvPerson_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtbxPersonFirstName.Text = dgvPerson.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtbxPersonLastName.Text = dgvPerson.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtbxPersonBirthYear.Text = dgvPerson.Rows[e.RowIndex].Cells[3].Value.ToString();
-            cmbbxPersonSex.Text = dgvPerson.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtbxPersonPhoneNumber.Text = dgvPerson.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtbxPersonEmailAddress.Text = dgvPerson.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
         #endregion
 
+        #region [- Manage Products -]
+
+        #region [- DgvProducts_CellClick -]
         private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
             //nmrcUpDwnProductQuantity. = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtbxProductUnitPrice.Text= dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
+        #endregion
 
         #region [- BtnUpload_Click -]
         private void BtnUpload_Click(object sender, EventArgs e)
@@ -86,7 +78,7 @@ namespace View
         #region [- BtnProductEdit_Click -]
         private void BtnProductEdit_Click(object sender, EventArgs e)
         {
-        } 
+        }
         #endregion
 
         #region [- BtnProductRefresh_Click -]
@@ -96,6 +88,30 @@ namespace View
         }
         #endregion
 
+        #region [- AddImage() -]
+        private byte[] AddImage()
+        {
+            FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
+            byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
+            return imageByte;
+        }
+        #endregion
+        #endregion
+
+        #region [- Manage People -]
+
+        #region [- DgvPerson_CellClick -]
+        private void DgvPerson_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtbxPersonFirstName.Text = dgvPerson.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtbxPersonLastName.Text = dgvPerson.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtbxPersonBirthYear.Text = dgvPerson.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbbxPersonSex.Text = dgvPerson.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtbxPersonPhoneNumber.Text = dgvPerson.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtbxPersonEmailAddress.Text = dgvPerson.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
+        #endregion
 
         #region [- BtnPersonRemove_Click -]
         private void BtnPersonRemove_Click(object sender, EventArgs e)
@@ -124,19 +140,10 @@ namespace View
         private void BtnPersonRefresh_Click(object sender, EventArgs e)
         {
             dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
-        } 
-        #endregion
-
-
-        #region [- AddImage() -]
-        private byte[] AddImage()
-        {
-            FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-            byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-            return imageByte;
         }
+        #endregion 
         #endregion
+
 
         public void InitializeID()
         {
