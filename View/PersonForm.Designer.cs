@@ -171,7 +171,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(415, 124);
+            this.btnRemove.Location = new System.Drawing.Point(707, 97);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(75, 23);
             this.btnRemove.TabIndex = 13;
@@ -181,7 +181,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(415, 155);
+            this.btnUpdate.Location = new System.Drawing.Point(707, 128);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 14;
@@ -190,7 +190,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(415, 184);
+            this.btnRefresh.Location = new System.Drawing.Point(707, 157);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 15;
@@ -201,7 +201,7 @@
             // dgvPerson
             // 
             this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerson.Location = new System.Drawing.Point(85, 262);
+            this.dgvPerson.Location = new System.Drawing.Point(346, 261);
             this.dgvPerson.Name = "dgvPerson";
             this.dgvPerson.Size = new System.Drawing.Size(559, 150);
             this.dgvPerson.TabIndex = 16;
