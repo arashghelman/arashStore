@@ -93,47 +93,77 @@ namespace Model.DomainModels.POCO
         #endregion
 
         #region [- Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
+
         public void Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
         {
             using (var context = new DTO.EF.StoreEntities())
             {
                 try
                 {
-                    var q = context.People.FirstOrDefault(x => x.ID == id) as DTO.EF.Person;
-                    if (q != null)
-                    {
-                        q.FirstName = firstName;
-                        q.LastName = lastName;
-                        q.BirthYear = birthYear;
-                        q.Sex = sex;
-                        q.PhoneNumber = phoneNumber;
-                        q.EmailAddress = emailAddress;
-                        context.Entry(q).CurrentValues.SetValues(context.People);
-                        context.SaveChanges();
-                    }
+                    context.People.Find(id);
+                    Ref_Person.FirstName = firstName;
+                    Ref_Person.LastName = lastName;
+                    Ref_Person.BirthYear = birthYear;
+                    Ref_Person.Sex = sex;
+                    Ref_Person.PhoneNumber = phoneNumber;
+                    Ref_Person.EmailAddress = emailAddress;
+                    context.SaveChanges();
                 }
-                catch (NullReferenceException)
+                catch (Exception)
                 {
 
-                    throw new NullReferenceException();
-                }
-                catch (ArgumentNullException)
-                {
-                    throw new ArgumentNullException();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
+                    throw new Exception();
                 }
                 finally
                 {
-                    if (context != null)
+                    if (context != null) 
                     {
                         context.Dispose();
                     }
                 }
             }
-        } 
+        }
+        //public void Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
+        //{
+        //    using (var context = new DTO.EF.StoreEntities())
+        //    {
+        //        try
+        //        {
+        //            var q = context.People.FirstOrDefault(x => x.ID == id) as DTO.EF.Person;
+        //            if (q != null)
+        //            {
+        //                q.FirstName = firstName;
+        //                q.LastName = lastName;
+        //                q.BirthYear = birthYear;
+        //                q.Sex = sex;
+        //                q.PhoneNumber = phoneNumber;
+        //                q.EmailAddress = emailAddress;
+        //                context.Entry(q).CurrentValues.SetValues(context.People);
+        //                context.SaveChanges();
+        //            }
+        //        }
+        //        catch (NullReferenceException)
+        //        {
+
+        //            throw new NullReferenceException();
+        //        }
+        //        catch (ArgumentNullException)
+        //        {
+        //            throw new ArgumentNullException();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            Console.WriteLine(ex.Message);
+        //        }
+        //        finally
+        //        {
+        //            if (context != null)
+        //            {
+        //                context.Dispose();
+        //            }
+        //        }
+        //    }
+        //} 
         #endregion
 
         #region [- Select() -]

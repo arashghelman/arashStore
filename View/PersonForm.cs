@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace View
 {
@@ -18,6 +18,7 @@ namespace View
         {
             InitializeComponent();
             Ref_PersonViewModel = new ViewModel.PersonViewModel();
+            Ref_ProductViewModel = new ViewModel.ProductViewModel();
         }
         #endregion
 
@@ -30,20 +31,23 @@ namespace View
         #endregion
 
         #region [- props -]
-        public ViewModel.PersonViewModel Ref_PersonViewModel { get; set; } 
+        public ViewModel.PersonViewModel Ref_PersonViewModel { get; set; }
+        public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
         #endregion
 
         #region [- AssignToolTip() -]
         private void AssignToolTip()
         {
-            toolTip1.SetToolTip(txtbxFirstName, "Enter your first name.");
-            toolTip1.SetToolTip(txtbxLastName, "Enter your last name.");
-            toolTip1.SetToolTip(txtbxBirthYear, "Enter the year you were born.");
+            toolTip1.SetToolTip(txtbxFirstName, "Enter your first name");
+            toolTip1.SetToolTip(txtbxLastName, "Enter your last name");
+            toolTip1.SetToolTip(txtbxBirthYear, "Enter the year you were born");
             toolTip1.SetToolTip(cmbbxSex, "Select your gender");
-            toolTip1.SetToolTip(txtbxPhoneNumber, "Enter your phone number.");
-            toolTip1.SetToolTip(txtbxEmailAddress, "Enter your email address.");
+            toolTip1.SetToolTip(txtbxPhoneNumber, "Enter your phone number");
+            toolTip1.SetToolTip(txtbxEmailAddress, "Enter your email address");
         }
         #endregion
+
+        #region [- Text Validation -]
 
         #region [- TxtbxFirstName_TextChanged -]
         private void TxtbxFirstName_TextChanged(object sender, EventArgs e)
@@ -149,12 +153,26 @@ namespace View
         }
         #endregion
 
-        #region [- TxtbxEmailAddress_TextChanged -]
-        private void TxtbxEmailAddress_TextChanged(object sender, EventArgs e)
+        #region [- TxtbxEmailAddress_Leave -]
+        private void TxtbxEmailAddress_Leave(object sender, EventArgs e)
         {
-            //MailAddress m = new MailAddress(txtbxEmailAddress.Text);
+            string pattern = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            if (Regex.IsMatch(txtbxEmailAddress.Text, pattern))
+            {
+                errorProvider1.Clear();
+                lblEmailError.Text = string.Empty;
+            }
+            else
+            {
+                string hint = "wrong format!!";
+                lblEmailError.Text = hint;
+                errorProvider1.SetError(txtbxEmailAddress, lblEmailError.Text);
+            }
         }
+        #endregion 
+
         #endregion
+
 
 
         #region [- BtnAdd_Click -]
@@ -181,12 +199,24 @@ namespace View
 
 
 
+
+
+        private void ShowPurchaseMessage(string message)
+        {
+            message = "You've successfully purchased these items: \n";
+        }
+
+
+
+
+
+
+
         private void Button1_Click(object sender, EventArgs e)
         {
             ManagementForm Ref = new ManagementForm();
             Ref.Show();
         }
-
 
 
         //public void DetectEachChar(string text, string hint)

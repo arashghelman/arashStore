@@ -63,6 +63,8 @@
             this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
             this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
+            this.lblPersonCode = new System.Windows.Forms.Label();
+            this.lblShowPersonID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
             this.grpbxProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -249,6 +251,8 @@
             // 
             // grpbxPeople
             // 
+            this.grpbxPeople.Controls.Add(this.lblShowPersonID);
+            this.grpbxPeople.Controls.Add(this.lblPersonCode);
             this.grpbxPeople.Controls.Add(this.txtbxPersonEmailAddress);
             this.grpbxPeople.Controls.Add(this.lblPersonEmailAddress);
             this.grpbxPeople.Controls.Add(this.cmbbxPersonSex);
@@ -408,12 +412,29 @@
             this.lblPersonFirstName.TabIndex = 19;
             this.lblPersonFirstName.Text = "First Name: ";
             // 
+            // lblPersonCode
+            // 
+            this.lblPersonCode.AutoSize = true;
+            this.lblPersonCode.Location = new System.Drawing.Point(232, 133);
+            this.lblPersonCode.Name = "lblPersonCode";
+            this.lblPersonCode.Size = new System.Drawing.Size(21, 13);
+            this.lblPersonCode.TabIndex = 35;
+            this.lblPersonCode.Text = "ID:";
+            // 
+            // lblShowPersonID
+            // 
+            this.lblShowPersonID.AutoSize = true;
+            this.lblShowPersonID.Location = new System.Drawing.Point(259, 133);
+            this.lblShowPersonID.Name = "lblShowPersonID";
+            this.lblShowPersonID.Size = new System.Drawing.Size(0, 13);
+            this.lblShowPersonID.TabIndex = 36;
+            // 
             // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(762, 412);
+            this.ClientSize = new System.Drawing.Size(761, 411);
             this.Controls.Add(this.grpbxPeople);
             this.Controls.Add(this.grpbxProducts);
             this.Name = "ManagementForm";
@@ -467,5 +488,7 @@
         private System.Windows.Forms.Label lblPersonLastName;
         private System.Windows.Forms.TextBox txtbxPersonEmailAddress;
         private System.Windows.Forms.Label lblPersonEmailAddress;
+        private System.Windows.Forms.Label lblShowPersonID;
+        private System.Windows.Forms.Label lblPersonCode;
     }
 }

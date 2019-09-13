@@ -40,7 +40,7 @@ namespace View
         private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //nmrcUpDwnProductQuantity. = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //nmrcUpDwnProductQuantity.TextAlign = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
@@ -104,6 +104,7 @@ namespace View
         #region [- DgvPerson_CellClick -]
         private void DgvPerson_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblShowPersonID.Text = dgvPerson.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtbxPersonFirstName.Text = dgvPerson.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtbxPersonLastName.Text = dgvPerson.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtbxPersonBirthYear.Text = dgvPerson.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -123,16 +124,16 @@ namespace View
         #region [- BtnPersonEdit_Click -]
         private void BtnPersonEdit_Click(object sender, EventArgs e)
         {
-            //Ref_PersonViewModel.Edit
-            //    (
-            //    Convert.ToInt32(lblShowID.Text),
-            //    txtbxPersonFirstName.Text,
-            //    txtbxPersonLastName.Text,
-            //    Convert.ToInt32(txtbxPersonBirthYear),
-            //    cmbbxPersonSex.Text,
-            //    Convert.ToInt32(txtbxPersonPhoneNumber.Text),
-            //    txtbxPersonEmailAddress.Text
-            //    );
+            Ref_PersonViewModel.Edit
+                (
+                Convert.ToInt32(lblShowPersonID.Text),
+                txtbxPersonFirstName.Text,
+                txtbxPersonLastName.Text,
+                Convert.ToInt32(txtbxPersonBirthYear.Text),
+                cmbbxPersonSex.Text,
+                Convert.ToInt32(txtbxPersonPhoneNumber.Text),
+                txtbxPersonEmailAddress.Text
+                );
         }
         #endregion
 
