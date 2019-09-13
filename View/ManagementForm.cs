@@ -13,45 +13,134 @@ namespace View
 {
     public partial class ManagementForm : Form
     {
+        #region [- ctor -]
         public ManagementForm()
         {
             InitializeComponent();
             Ref_ProductViewModel = new ViewModel.ProductViewModel();
+            Ref_PersonViewModel = new ViewModel.PersonViewModel();
+        }
+        #endregion
+
+        #region [- props -]
+        public ViewModel.PersonViewModel Ref_PersonViewModel { get; set; }
+        public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
+        #endregion
+
+        #region [- ManagementForm_Load -]
+        private void ManagementForm_Load(object sender, EventArgs e)
+        {
+            cmbbxPersonSex.Items.AddRange(new string[] { "Male", "Female" });
+        } 
+        #endregion
+
+        #region [- DgvPerson_CellClick -]
+        private void DgvPerson_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtbxPersonFirstName.Text = dgvPerson.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtbxPersonLastName.Text = dgvPerson.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtbxPersonBirthYear.Text = dgvPerson.Rows[e.RowIndex].Cells[3].Value.ToString();
+            cmbbxPersonSex.Text = dgvPerson.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtbxPersonPhoneNumber.Text = dgvPerson.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtbxPersonEmailAddress.Text = dgvPerson.Rows[e.RowIndex].Cells[7].Value.ToString();
+        }
+        #endregion
+
+        private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
+            //nmrcUpDwnProductQuantity. = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtbxProductUnitPrice.Text= dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
 
-        public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
-
+        #region [- BtnUpload_Click -]
         private void BtnUpload_Click(object sender, EventArgs e)
         {
             fileDialogUpload.ShowDialog();
             lblFileName.Text = fileDialogUpload.FileName;
-
         }
+        #endregion
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        #region [- BtnProductAdd_Click -]
+        private void BtnProductAdd_Click_1(object sender, EventArgs e)
         {
-            byte[] imageByte = null;
-            FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-            imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-
             Ref_ProductViewModel.Add
                 (
-                txtbxName.Text,
-                Convert.ToInt32(nmrcUpDwnQuantity.TextAlign),
-                Convert.ToDecimal(txtbxUnitPrice.Text),
-                Convert.ToDecimal(txtbxDiscount.Text),
-                imageByte
+                txtbxProductName.Text,
+                Convert.ToInt32(nmrcUpDwnProductQuantity.TextAlign),
+                Convert.ToDecimal(txtbxProductUnitPrice.Text),
+                Convert.ToDecimal(txtbxProductDiscount.Text),
+                AddImage()
                 );
         }
-        //public byte[] AddImage()
-        //{
-        //    byte[] imageByte = null;
-        //    FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-        //    BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-        //    imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-        //    return imageByte;
-        //}
-        
+        #endregion
+
+        #region [- BtnProductRemove_Click -]
+        private void BtnProductRemove_Click(object sender, EventArgs e)
+        {
+            Ref_ProductViewModel.Remove();
+        }
+        #endregion
+
+        #region [- BtnProductEdit_Click -]
+        private void BtnProductEdit_Click(object sender, EventArgs e)
+        {
+        } 
+        #endregion
+
+        #region [- BtnProductRefresh_Click -]
+        private void BtnProductRefresh_Click(object sender, EventArgs e)
+        {
+            dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
+        }
+        #endregion
+
+
+        #region [- BtnPersonRemove_Click -]
+        private void BtnPersonRemove_Click(object sender, EventArgs e)
+        {
+            Ref_PersonViewModel.Remove();
+        }
+        #endregion
+
+        #region [- BtnPersonEdit_Click -]
+        private void BtnPersonEdit_Click(object sender, EventArgs e)
+        {
+            //Ref_PersonViewModel.Edit
+            //    (
+            //    Convert.ToInt32(lblShowID.Text),
+            //    txtbxPersonFirstName.Text,
+            //    txtbxPersonLastName.Text,
+            //    Convert.ToInt32(txtbxPersonBirthYear),
+            //    cmbbxPersonSex.Text,
+            //    Convert.ToInt32(txtbxPersonPhoneNumber.Text),
+            //    txtbxPersonEmailAddress.Text
+            //    );
+        }
+        #endregion
+
+        #region [- BtnPersonRefresh_Click -]
+        private void BtnPersonRefresh_Click(object sender, EventArgs e)
+        {
+            dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
+        } 
+        #endregion
+
+
+        #region [- AddImage() -]
+        private byte[] AddImage()
+        {
+            FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
+            byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
+            return imageByte;
+        }
+        #endregion
+
+        public void InitializeID()
+        {
+            DataGridViewCellEventArgs e;
+        }
     }
 }

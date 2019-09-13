@@ -152,7 +152,7 @@ namespace View
         #region [- TxtbxEmailAddress_TextChanged -]
         private void TxtbxEmailAddress_TextChanged(object sender, EventArgs e)
         {
-            MailAddress m = new MailAddress(txtbxEmailAddress.Text);
+            //MailAddress m = new MailAddress(txtbxEmailAddress.Text);
         }
         #endregion
 
@@ -172,26 +172,20 @@ namespace View
         } 
         #endregion
 
-        #region [- BtnRefresh_Click -]
-        private void BtnRefresh_Click(object sender, EventArgs e)
-        {
-            dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
-        }
-        #endregion
 
-        #region [- BtnRemove_Click -]
-        private void BtnRemove_Click(object sender, EventArgs e)
-        {
-            Ref_PersonViewModel.Remove();
-        }
+
+
+
+
+
+
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
             ManagementForm Ref = new ManagementForm();
             Ref.Show();
         }
-        #endregion
-
 
 
 

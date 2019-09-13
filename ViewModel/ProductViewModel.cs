@@ -34,9 +34,9 @@ namespace ViewModel
         #endregion
 
         #region [- Refresh() -]
-        public void Refresh()
+        public dynamic Refresh()
         {
-            Ref_ProductCrud.Select();
+            return Ref_ProductCrud.Select();
         } 
         #endregion
     }

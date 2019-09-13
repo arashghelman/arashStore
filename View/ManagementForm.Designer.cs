@@ -28,103 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblImage = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblUnitPrice = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
-            this.txtbxName = new System.Windows.Forms.TextBox();
-            this.txtbxDiscount = new System.Windows.Forms.TextBox();
-            this.txtbxUnitPrice = new System.Windows.Forms.TextBox();
-            this.nmrcUpDwnQuantity = new System.Windows.Forms.NumericUpDown();
+            this.lblProductName = new System.Windows.Forms.Label();
+            this.lblProductImage = new System.Windows.Forms.Label();
+            this.lblProductQuantity = new System.Windows.Forms.Label();
+            this.lblProductUnitPrice = new System.Windows.Forms.Label();
+            this.lblDiscountDiscount = new System.Windows.Forms.Label();
+            this.txtbxProductName = new System.Windows.Forms.TextBox();
+            this.txtbxProductDiscount = new System.Windows.Forms.TextBox();
+            this.txtbxProductUnitPrice = new System.Windows.Forms.TextBox();
+            this.nmrcUpDwnProductQuantity = new System.Windows.Forms.NumericUpDown();
             this.btnUpload = new System.Windows.Forms.Button();
             this.fileDialogUpload = new System.Windows.Forms.OpenFileDialog();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnProductAdd = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnQuantity)).BeginInit();
+            this.grpbxProducts = new System.Windows.Forms.GroupBox();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.btnProductRefresh = new System.Windows.Forms.Button();
+            this.btnProductEdit = new System.Windows.Forms.Button();
+            this.btnProductRemove = new System.Windows.Forms.Button();
+            this.grpbxPeople = new System.Windows.Forms.GroupBox();
+            this.txtbxPersonEmailAddress = new System.Windows.Forms.TextBox();
+            this.lblPersonEmailAddress = new System.Windows.Forms.Label();
+            this.cmbbxPersonSex = new System.Windows.Forms.ComboBox();
+            this.txtbxPersonBirthYear = new System.Windows.Forms.TextBox();
+            this.txtbxPersonLastName = new System.Windows.Forms.TextBox();
+            this.lblPersonSex = new System.Windows.Forms.Label();
+            this.lblPersonBirthYear = new System.Windows.Forms.Label();
+            this.lblPersonLastName = new System.Windows.Forms.Label();
+            this.dgvPerson = new System.Windows.Forms.DataGridView();
+            this.btnPersonRefresh = new System.Windows.Forms.Button();
+            this.btnPersonEdit = new System.Windows.Forms.Button();
+            this.btnPersonRemove = new System.Windows.Forms.Button();
+            this.txtbxPersonPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
+            this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
+            this.lblPersonFirstName = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
+            this.grpbxProducts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            this.grpbxPeople.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblName
+            // lblProductName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(72, 86);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(41, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name: ";
+            this.lblProductName.AutoSize = true;
+            this.lblProductName.Location = new System.Drawing.Point(58, 50);
+            this.lblProductName.Name = "lblProductName";
+            this.lblProductName.Size = new System.Drawing.Size(41, 13);
+            this.lblProductName.TabIndex = 0;
+            this.lblProductName.Text = "Name: ";
             // 
-            // lblImage
+            // lblProductImage
             // 
-            this.lblImage.AutoSize = true;
-            this.lblImage.Location = new System.Drawing.Point(32, 200);
-            this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(81, 13);
-            this.lblImage.TabIndex = 1;
-            this.lblImage.Text = "Product Photo: ";
+            this.lblProductImage.AutoSize = true;
+            this.lblProductImage.Location = new System.Drawing.Point(18, 161);
+            this.lblProductImage.Name = "lblProductImage";
+            this.lblProductImage.Size = new System.Drawing.Size(81, 13);
+            this.lblProductImage.TabIndex = 1;
+            this.lblProductImage.Text = "Product Photo: ";
             // 
-            // lblQuantity
+            // lblProductQuantity
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(43, 119);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
-            this.lblQuantity.TabIndex = 2;
-            this.lblQuantity.Text = "Quantity:";
+            this.lblProductQuantity.AutoSize = true;
+            this.lblProductQuantity.Location = new System.Drawing.Point(29, 80);
+            this.lblProductQuantity.Name = "lblProductQuantity";
+            this.lblProductQuantity.Size = new System.Drawing.Size(49, 13);
+            this.lblProductQuantity.TabIndex = 2;
+            this.lblProductQuantity.Text = "Quantity:";
             // 
-            // lblUnitPrice
+            // lblProductUnitPrice
             // 
-            this.lblUnitPrice.AutoSize = true;
-            this.lblUnitPrice.Location = new System.Drawing.Point(43, 144);
-            this.lblUnitPrice.Name = "lblUnitPrice";
-            this.lblUnitPrice.Size = new System.Drawing.Size(56, 13);
-            this.lblUnitPrice.TabIndex = 3;
-            this.lblUnitPrice.Text = "Unit Price:";
+            this.lblProductUnitPrice.AutoSize = true;
+            this.lblProductUnitPrice.Location = new System.Drawing.Point(29, 105);
+            this.lblProductUnitPrice.Name = "lblProductUnitPrice";
+            this.lblProductUnitPrice.Size = new System.Drawing.Size(56, 13);
+            this.lblProductUnitPrice.TabIndex = 3;
+            this.lblProductUnitPrice.Text = "Unit Price:";
             // 
-            // lblDiscount
+            // lblDiscountDiscount
             // 
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Location = new System.Drawing.Point(43, 169);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(55, 13);
-            this.lblDiscount.TabIndex = 4;
-            this.lblDiscount.Text = "Discount: ";
+            this.lblDiscountDiscount.AutoSize = true;
+            this.lblDiscountDiscount.Location = new System.Drawing.Point(29, 130);
+            this.lblDiscountDiscount.Name = "lblDiscountDiscount";
+            this.lblDiscountDiscount.Size = new System.Drawing.Size(55, 13);
+            this.lblDiscountDiscount.TabIndex = 4;
+            this.lblDiscountDiscount.Text = "Discount: ";
             // 
-            // txtbxName
+            // txtbxProductName
             // 
-            this.txtbxName.Location = new System.Drawing.Point(119, 83);
-            this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(100, 20);
-            this.txtbxName.TabIndex = 5;
+            this.txtbxProductName.Location = new System.Drawing.Point(105, 47);
+            this.txtbxProductName.Name = "txtbxProductName";
+            this.txtbxProductName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxProductName.TabIndex = 5;
             // 
-            // txtbxDiscount
+            // txtbxProductDiscount
             // 
-            this.txtbxDiscount.Location = new System.Drawing.Point(119, 166);
-            this.txtbxDiscount.Name = "txtbxDiscount";
-            this.txtbxDiscount.Size = new System.Drawing.Size(100, 20);
-            this.txtbxDiscount.TabIndex = 8;
+            this.txtbxProductDiscount.Location = new System.Drawing.Point(105, 127);
+            this.txtbxProductDiscount.Name = "txtbxProductDiscount";
+            this.txtbxProductDiscount.Size = new System.Drawing.Size(100, 20);
+            this.txtbxProductDiscount.TabIndex = 8;
             // 
-            // txtbxUnitPrice
+            // txtbxProductUnitPrice
             // 
-            this.txtbxUnitPrice.Location = new System.Drawing.Point(119, 141);
-            this.txtbxUnitPrice.Name = "txtbxUnitPrice";
-            this.txtbxUnitPrice.Size = new System.Drawing.Size(100, 20);
-            this.txtbxUnitPrice.TabIndex = 9;
+            this.txtbxProductUnitPrice.Location = new System.Drawing.Point(105, 102);
+            this.txtbxProductUnitPrice.Name = "txtbxProductUnitPrice";
+            this.txtbxProductUnitPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtbxProductUnitPrice.TabIndex = 9;
             // 
-            // nmrcUpDwnQuantity
+            // nmrcUpDwnProductQuantity
             // 
-            this.nmrcUpDwnQuantity.Location = new System.Drawing.Point(119, 112);
-            this.nmrcUpDwnQuantity.Maximum = new decimal(new int[] {
+            this.nmrcUpDwnProductQuantity.Location = new System.Drawing.Point(105, 73);
+            this.nmrcUpDwnProductQuantity.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.nmrcUpDwnQuantity.Name = "nmrcUpDwnQuantity";
-            this.nmrcUpDwnQuantity.Size = new System.Drawing.Size(100, 20);
-            this.nmrcUpDwnQuantity.TabIndex = 10;
+            this.nmrcUpDwnProductQuantity.Name = "nmrcUpDwnProductQuantity";
+            this.nmrcUpDwnProductQuantity.Size = new System.Drawing.Size(100, 20);
+            this.nmrcUpDwnProductQuantity.TabIndex = 10;
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(119, 192);
+            this.btnUpload.Location = new System.Drawing.Point(105, 153);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(100, 23);
             this.btnUpload.TabIndex = 11;
@@ -134,68 +160,312 @@
             // 
             // fileDialogUpload
             // 
-            this.fileDialogUpload.FileName = "openFileDialog1";
             this.fileDialogUpload.Filter = "\"JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*\"";
             this.fileDialogUpload.FilterIndex = 2;
             this.fileDialogUpload.InitialDirectory = "@\"C:\\\"";
+            this.fileDialogUpload.Title = "Open a Picture";
             // 
-            // btnAdd
+            // btnProductAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(217, 333);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.btnProductAdd.Location = new System.Drawing.Point(258, 45);
+            this.btnProductAdd.Name = "btnProductAdd";
+            this.btnProductAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnProductAdd.TabIndex = 12;
+            this.btnProductAdd.Text = "Add";
+            this.btnProductAdd.UseVisualStyleBackColor = true;
+            this.btnProductAdd.Click += new System.EventHandler(this.BtnProductAdd_Click_1);
             // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Location = new System.Drawing.Point(116, 218);
+            this.lblFileName.Location = new System.Drawing.Point(18, 174);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(0, 13);
             this.lblFileName.TabIndex = 13;
+            // 
+            // grpbxProducts
+            // 
+            this.grpbxProducts.Controls.Add(this.dgvProducts);
+            this.grpbxProducts.Controls.Add(this.btnProductRefresh);
+            this.grpbxProducts.Controls.Add(this.btnProductEdit);
+            this.grpbxProducts.Controls.Add(this.btnProductRemove);
+            this.grpbxProducts.Controls.Add(this.btnUpload);
+            this.grpbxProducts.Controls.Add(this.btnProductAdd);
+            this.grpbxProducts.Controls.Add(this.lblFileName);
+            this.grpbxProducts.Controls.Add(this.lblProductName);
+            this.grpbxProducts.Controls.Add(this.txtbxProductName);
+            this.grpbxProducts.Controls.Add(this.txtbxProductUnitPrice);
+            this.grpbxProducts.Controls.Add(this.lblProductImage);
+            this.grpbxProducts.Controls.Add(this.lblProductUnitPrice);
+            this.grpbxProducts.Controls.Add(this.lblProductQuantity);
+            this.grpbxProducts.Controls.Add(this.lblDiscountDiscount);
+            this.grpbxProducts.Controls.Add(this.txtbxProductDiscount);
+            this.grpbxProducts.Controls.Add(this.nmrcUpDwnProductQuantity);
+            this.grpbxProducts.Location = new System.Drawing.Point(12, 11);
+            this.grpbxProducts.Name = "grpbxProducts";
+            this.grpbxProducts.Size = new System.Drawing.Size(367, 392);
+            this.grpbxProducts.TabIndex = 14;
+            this.grpbxProducts.TabStop = false;
+            this.grpbxProducts.Text = "Manage Products";
+            // 
+            // dgvProducts
+            // 
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Location = new System.Drawing.Point(6, 208);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.Size = new System.Drawing.Size(355, 178);
+            this.dgvProducts.TabIndex = 17;
+            this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellClick);
+            // 
+            // btnProductRefresh
+            // 
+            this.btnProductRefresh.Location = new System.Drawing.Point(258, 131);
+            this.btnProductRefresh.Name = "btnProductRefresh";
+            this.btnProductRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnProductRefresh.TabIndex = 16;
+            this.btnProductRefresh.Text = "Refresh";
+            this.btnProductRefresh.UseVisualStyleBackColor = true;
+            this.btnProductRefresh.Click += new System.EventHandler(this.BtnProductRefresh_Click);
+            // 
+            // btnProductEdit
+            // 
+            this.btnProductEdit.Location = new System.Drawing.Point(258, 102);
+            this.btnProductEdit.Name = "btnProductEdit";
+            this.btnProductEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnProductEdit.TabIndex = 15;
+            this.btnProductEdit.Text = "Edit";
+            this.btnProductEdit.UseVisualStyleBackColor = true;
+            this.btnProductEdit.Click += new System.EventHandler(this.BtnProductEdit_Click);
+            // 
+            // btnProductRemove
+            // 
+            this.btnProductRemove.Location = new System.Drawing.Point(258, 75);
+            this.btnProductRemove.Name = "btnProductRemove";
+            this.btnProductRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnProductRemove.TabIndex = 14;
+            this.btnProductRemove.Text = "Remove";
+            this.btnProductRemove.UseVisualStyleBackColor = true;
+            this.btnProductRemove.Click += new System.EventHandler(this.BtnProductRemove_Click);
+            // 
+            // grpbxPeople
+            // 
+            this.grpbxPeople.Controls.Add(this.txtbxPersonEmailAddress);
+            this.grpbxPeople.Controls.Add(this.lblPersonEmailAddress);
+            this.grpbxPeople.Controls.Add(this.cmbbxPersonSex);
+            this.grpbxPeople.Controls.Add(this.txtbxPersonBirthYear);
+            this.grpbxPeople.Controls.Add(this.txtbxPersonLastName);
+            this.grpbxPeople.Controls.Add(this.lblPersonSex);
+            this.grpbxPeople.Controls.Add(this.lblPersonBirthYear);
+            this.grpbxPeople.Controls.Add(this.lblPersonLastName);
+            this.grpbxPeople.Controls.Add(this.dgvPerson);
+            this.grpbxPeople.Controls.Add(this.btnPersonRefresh);
+            this.grpbxPeople.Controls.Add(this.btnPersonEdit);
+            this.grpbxPeople.Controls.Add(this.btnPersonRemove);
+            this.grpbxPeople.Controls.Add(this.txtbxPersonPhoneNumber);
+            this.grpbxPeople.Controls.Add(this.lblPersonPhoneNumber);
+            this.grpbxPeople.Controls.Add(this.txtbxPersonFirstName);
+            this.grpbxPeople.Controls.Add(this.lblPersonFirstName);
+            this.grpbxPeople.Location = new System.Drawing.Point(385, 12);
+            this.grpbxPeople.Name = "grpbxPeople";
+            this.grpbxPeople.Size = new System.Drawing.Size(367, 391);
+            this.grpbxPeople.TabIndex = 15;
+            this.grpbxPeople.TabStop = false;
+            this.grpbxPeople.Text = "Manage People";
+            // 
+            // txtbxPersonEmailAddress
+            // 
+            this.txtbxPersonEmailAddress.Location = new System.Drawing.Point(250, 93);
+            this.txtbxPersonEmailAddress.Name = "txtbxPersonEmailAddress";
+            this.txtbxPersonEmailAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPersonEmailAddress.TabIndex = 34;
+            // 
+            // lblPersonEmailAddress
+            // 
+            this.lblPersonEmailAddress.AutoSize = true;
+            this.lblPersonEmailAddress.Location = new System.Drawing.Point(247, 77);
+            this.lblPersonEmailAddress.Name = "lblPersonEmailAddress";
+            this.lblPersonEmailAddress.Size = new System.Drawing.Size(76, 13);
+            this.lblPersonEmailAddress.TabIndex = 33;
+            this.lblPersonEmailAddress.Text = "Email Address:";
+            // 
+            // cmbbxPersonSex
+            // 
+            this.cmbbxPersonSex.FormattingEnabled = true;
+            this.cmbbxPersonSex.Location = new System.Drawing.Point(235, 45);
+            this.cmbbxPersonSex.Name = "cmbbxPersonSex";
+            this.cmbbxPersonSex.Size = new System.Drawing.Size(121, 21);
+            this.cmbbxPersonSex.TabIndex = 32;
+            // 
+            // txtbxPersonBirthYear
+            // 
+            this.txtbxPersonBirthYear.Location = new System.Drawing.Point(106, 92);
+            this.txtbxPersonBirthYear.Name = "txtbxPersonBirthYear";
+            this.txtbxPersonBirthYear.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPersonBirthYear.TabIndex = 31;
+            // 
+            // txtbxPersonLastName
+            // 
+            this.txtbxPersonLastName.Location = new System.Drawing.Point(106, 52);
+            this.txtbxPersonLastName.Name = "txtbxPersonLastName";
+            this.txtbxPersonLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPersonLastName.TabIndex = 30;
+            // 
+            // lblPersonSex
+            // 
+            this.lblPersonSex.AutoSize = true;
+            this.lblPersonSex.Location = new System.Drawing.Point(292, 27);
+            this.lblPersonSex.Name = "lblPersonSex";
+            this.lblPersonSex.Size = new System.Drawing.Size(31, 13);
+            this.lblPersonSex.TabIndex = 29;
+            this.lblPersonSex.Text = "Sex: ";
+            // 
+            // lblPersonBirthYear
+            // 
+            this.lblPersonBirthYear.AutoSize = true;
+            this.lblPersonBirthYear.Location = new System.Drawing.Point(20, 99);
+            this.lblPersonBirthYear.Name = "lblPersonBirthYear";
+            this.lblPersonBirthYear.Size = new System.Drawing.Size(56, 13);
+            this.lblPersonBirthYear.TabIndex = 28;
+            this.lblPersonBirthYear.Text = "Birth Year:";
+            // 
+            // lblPersonLastName
+            // 
+            this.lblPersonLastName.AutoSize = true;
+            this.lblPersonLastName.Location = new System.Drawing.Point(20, 59);
+            this.lblPersonLastName.Name = "lblPersonLastName";
+            this.lblPersonLastName.Size = new System.Drawing.Size(64, 13);
+            this.lblPersonLastName.TabIndex = 27;
+            this.lblPersonLastName.Text = "Last Name: ";
+            // 
+            // dgvPerson
+            // 
+            this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerson.Location = new System.Drawing.Point(6, 207);
+            this.dgvPerson.Name = "dgvPerson";
+            this.dgvPerson.Size = new System.Drawing.Size(355, 178);
+            this.dgvPerson.TabIndex = 26;
+            this.dgvPerson.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPerson_CellClick);
+            // 
+            // btnPersonRefresh
+            // 
+            this.btnPersonRefresh.Location = new System.Drawing.Point(286, 173);
+            this.btnPersonRefresh.Name = "btnPersonRefresh";
+            this.btnPersonRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnPersonRefresh.TabIndex = 25;
+            this.btnPersonRefresh.Text = "Refresh";
+            this.btnPersonRefresh.UseVisualStyleBackColor = true;
+            this.btnPersonRefresh.Click += new System.EventHandler(this.BtnPersonRefresh_Click);
+            // 
+            // btnPersonEdit
+            // 
+            this.btnPersonEdit.Location = new System.Drawing.Point(143, 173);
+            this.btnPersonEdit.Name = "btnPersonEdit";
+            this.btnPersonEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnPersonEdit.TabIndex = 24;
+            this.btnPersonEdit.Text = "Edit";
+            this.btnPersonEdit.UseVisualStyleBackColor = true;
+            this.btnPersonEdit.Click += new System.EventHandler(this.BtnPersonEdit_Click);
+            // 
+            // btnPersonRemove
+            // 
+            this.btnPersonRemove.Location = new System.Drawing.Point(6, 173);
+            this.btnPersonRemove.Name = "btnPersonRemove";
+            this.btnPersonRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnPersonRemove.TabIndex = 23;
+            this.btnPersonRemove.Text = "Remove";
+            this.btnPersonRemove.UseVisualStyleBackColor = true;
+            this.btnPersonRemove.Click += new System.EventHandler(this.BtnPersonRemove_Click);
+            // 
+            // txtbxPersonPhoneNumber
+            // 
+            this.txtbxPersonPhoneNumber.Location = new System.Drawing.Point(113, 122);
+            this.txtbxPersonPhoneNumber.Name = "txtbxPersonPhoneNumber";
+            this.txtbxPersonPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPersonPhoneNumber.TabIndex = 22;
+            // 
+            // lblPersonPhoneNumber
+            // 
+            this.lblPersonPhoneNumber.AutoSize = true;
+            this.lblPersonPhoneNumber.Location = new System.Drawing.Point(1, 125);
+            this.lblPersonPhoneNumber.Name = "lblPersonPhoneNumber";
+            this.lblPersonPhoneNumber.Size = new System.Drawing.Size(84, 13);
+            this.lblPersonPhoneNumber.TabIndex = 21;
+            this.lblPersonPhoneNumber.Text = "Phone Number: ";
+            // 
+            // txtbxPersonFirstName
+            // 
+            this.txtbxPersonFirstName.Location = new System.Drawing.Point(113, 24);
+            this.txtbxPersonFirstName.Name = "txtbxPersonFirstName";
+            this.txtbxPersonFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPersonFirstName.TabIndex = 20;
+            // 
+            // lblPersonFirstName
+            // 
+            this.lblPersonFirstName.AutoSize = true;
+            this.lblPersonFirstName.Location = new System.Drawing.Point(29, 27);
+            this.lblPersonFirstName.Name = "lblPersonFirstName";
+            this.lblPersonFirstName.Size = new System.Drawing.Size(63, 13);
+            this.lblPersonFirstName.TabIndex = 19;
+            this.lblPersonFirstName.Text = "First Name: ";
             // 
             // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 418);
-            this.Controls.Add(this.lblFileName);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.nmrcUpDwnQuantity);
-            this.Controls.Add(this.txtbxUnitPrice);
-            this.Controls.Add(this.txtbxDiscount);
-            this.Controls.Add(this.txtbxName);
-            this.Controls.Add(this.lblDiscount);
-            this.Controls.Add(this.lblUnitPrice);
-            this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.lblImage);
-            this.Controls.Add(this.lblName);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(762, 412);
+            this.Controls.Add(this.grpbxPeople);
+            this.Controls.Add(this.grpbxProducts);
             this.Name = "ManagementForm";
-            this.Text = "ManagementForm";
-            ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnQuantity)).EndInit();
+            this.Text = "Store Management";
+            this.Load += new System.EventHandler(this.ManagementForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).EndInit();
+            this.grpbxProducts.ResumeLayout(false);
+            this.grpbxProducts.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            this.grpbxPeople.ResumeLayout(false);
+            this.grpbxPeople.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblImage;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblUnitPrice;
-        private System.Windows.Forms.Label lblDiscount;
-        private System.Windows.Forms.TextBox txtbxName;
-        private System.Windows.Forms.TextBox txtbxDiscount;
-        private System.Windows.Forms.TextBox txtbxUnitPrice;
-        private System.Windows.Forms.NumericUpDown nmrcUpDwnQuantity;
+        private System.Windows.Forms.Label lblProductName;
+        private System.Windows.Forms.Label lblProductImage;
+        private System.Windows.Forms.Label lblProductQuantity;
+        private System.Windows.Forms.Label lblProductUnitPrice;
+        private System.Windows.Forms.Label lblDiscountDiscount;
+        private System.Windows.Forms.TextBox txtbxProductName;
+        private System.Windows.Forms.TextBox txtbxProductDiscount;
+        private System.Windows.Forms.TextBox txtbxProductUnitPrice;
+        private System.Windows.Forms.NumericUpDown nmrcUpDwnProductQuantity;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.OpenFileDialog fileDialogUpload;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnProductAdd;
         private System.Windows.Forms.Label lblFileName;
+        private System.Windows.Forms.GroupBox grpbxProducts;
+        private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.Button btnProductRefresh;
+        private System.Windows.Forms.Button btnProductEdit;
+        private System.Windows.Forms.Button btnProductRemove;
+        private System.Windows.Forms.GroupBox grpbxPeople;
+        private System.Windows.Forms.TextBox txtbxPersonFirstName;
+        private System.Windows.Forms.Label lblPersonFirstName;
+        private System.Windows.Forms.Button btnPersonRefresh;
+        private System.Windows.Forms.Button btnPersonEdit;
+        private System.Windows.Forms.Button btnPersonRemove;
+        private System.Windows.Forms.TextBox txtbxPersonPhoneNumber;
+        private System.Windows.Forms.Label lblPersonPhoneNumber;
+        private System.Windows.Forms.DataGridView dgvPerson;
+        private System.Windows.Forms.ComboBox cmbbxPersonSex;
+        private System.Windows.Forms.TextBox txtbxPersonBirthYear;
+        private System.Windows.Forms.TextBox txtbxPersonLastName;
+        private System.Windows.Forms.Label lblPersonSex;
+        private System.Windows.Forms.Label lblPersonBirthYear;
+        private System.Windows.Forms.Label lblPersonLastName;
+        private System.Windows.Forms.TextBox txtbxPersonEmailAddress;
+        private System.Windows.Forms.Label lblPersonEmailAddress;
     }
 }

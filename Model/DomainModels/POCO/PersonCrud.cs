@@ -99,7 +99,7 @@ namespace Model.DomainModels.POCO
             {
                 try
                 {
-                    var q = context.People.FirstOrDefault(x => x.ID == id);
+                    var q = context.People.FirstOrDefault(x => x.ID == id) as DTO.EF.Person;
                     if (q != null)
                     {
                         q.FirstName = firstName;

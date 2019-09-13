@@ -16,7 +16,7 @@ namespace ViewModel
         #endregion
 
         #region [- props -]
-        public Model.DomainModels.POCO.PersonCrud Ref_PersonCrud { get; set; } 
+        public Model.DomainModels.POCO.PersonCrud Ref_PersonCrud { get; set; }
         #endregion
 
         #region [- Add(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]

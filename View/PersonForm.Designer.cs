@@ -43,10 +43,6 @@
             this.txtbxEmailAddress = new System.Windows.Forms.TextBox();
             this.cmbbxSex = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.dgvPerson = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblErrorFirstName = new System.Windows.Forms.Label();
@@ -55,7 +51,6 @@
             this.lblErrorPhoneNumber = new System.Windows.Forms.Label();
             this.lblErrorEmailAddress = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,50 +157,13 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(415, 93);
+            this.btnAdd.Location = new System.Drawing.Point(140, 228);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(707, 97);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(75, 23);
-            this.btnRemove.TabIndex = 13;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(707, 128);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 14;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(707, 157);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 15;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
-            // 
-            // dgvPerson
-            // 
-            this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerson.Location = new System.Drawing.Point(261, 260);
-            this.dgvPerson.Name = "dgvPerson";
-            this.dgvPerson.Size = new System.Drawing.Size(559, 150);
-            this.dgvPerson.TabIndex = 16;
             // 
             // errorProvider1
             // 
@@ -266,17 +224,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 490);
+            this.ClientSize = new System.Drawing.Size(599, 433);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblErrorEmailAddress);
             this.Controls.Add(this.lblErrorPhoneNumber);
             this.Controls.Add(this.lblErrorBirthYear);
             this.Controls.Add(this.lblErrorLastName);
             this.Controls.Add(this.lblErrorFirstName);
-            this.Controls.Add(this.dgvPerson);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cmbbxSex);
             this.Controls.Add(this.txtbxEmailAddress);
@@ -294,7 +248,6 @@
             this.Name = "PersonForm";
             this.Text = "PersonForm";
             this.Load += new System.EventHandler(this.PersonForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,10 +269,6 @@
         private System.Windows.Forms.TextBox txtbxEmailAddress;
         private System.Windows.Forms.ComboBox cmbbxSex;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.DataGridView dgvPerson;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label lblErrorFirstName;
