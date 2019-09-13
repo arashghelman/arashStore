@@ -72,6 +72,7 @@
       <DependentUpon>StoreModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DomainModels\POCO\PersonCrud.cs" />
+    <Compile Include="DomainModels\POCO\ProductCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
