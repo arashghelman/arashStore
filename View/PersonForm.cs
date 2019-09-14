@@ -187,26 +187,22 @@ namespace View
                 Convert.ToInt32(txtbxPhoneNumber.Text),
                 txtbxEmailAddress.Text
                 );
-        } 
+        }
         #endregion
 
 
-
-
-
-
-
-
-
+        
+        
 
 
 
         private void ShowPurchaseMessage(string message)
         {
-            message = "You've successfully purchased these items: \n";
+            //message = "You've successfully purchased these items: \n"+
+            //    "Product Name : "+
         }
 
-
+        
 
 
 

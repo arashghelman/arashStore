@@ -19,6 +19,7 @@ namespace View
             InitializeComponent();
             Ref_ProductViewModel = new ViewModel.ProductViewModel();
         }
+
         public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
 
         private void StoreForm_Load(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace View
             PersonForm Ref_PersonForm = new PersonForm();
             Ref_PersonForm.Show();
         }
+        
 
         #region [- StretchImageLayout() -]
         private void StretchImageLayout()
@@ -54,7 +56,8 @@ namespace View
                     ((DataGridViewImageColumn)dgvProducts.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
                     break;
                 }
-        } 
+        }
         #endregion
+
     }
 }

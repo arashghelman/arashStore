@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StoreForm));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.productViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,6 +71,7 @@
             this.ClientSize = new System.Drawing.Size(788, 430);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.dgvProducts);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StoreForm";
             this.Text = "StoreForm";
             this.Load += new System.EventHandler(this.StoreForm_Load);

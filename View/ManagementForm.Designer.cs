@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagementForm));
             this.lblProductName = new System.Windows.Forms.Label();
             this.lblProductImage = new System.Windows.Forms.Label();
             this.lblProductQuantity = new System.Windows.Forms.Label();
@@ -47,6 +48,8 @@
             this.btnProductEdit = new System.Windows.Forms.Button();
             this.btnProductRemove = new System.Windows.Forms.Button();
             this.grpbxPeople = new System.Windows.Forms.GroupBox();
+            this.lblShowPersonID = new System.Windows.Forms.Label();
+            this.lblPersonCode = new System.Windows.Forms.Label();
             this.txtbxPersonEmailAddress = new System.Windows.Forms.TextBox();
             this.lblPersonEmailAddress = new System.Windows.Forms.Label();
             this.cmbbxPersonSex = new System.Windows.Forms.ComboBox();
@@ -63,8 +66,6 @@
             this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
             this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
-            this.lblPersonCode = new System.Windows.Forms.Label();
-            this.lblShowPersonID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
             this.grpbxProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -276,6 +277,23 @@
             this.grpbxPeople.TabStop = false;
             this.grpbxPeople.Text = "Manage People";
             // 
+            // lblShowPersonID
+            // 
+            this.lblShowPersonID.AutoSize = true;
+            this.lblShowPersonID.Location = new System.Drawing.Point(259, 133);
+            this.lblShowPersonID.Name = "lblShowPersonID";
+            this.lblShowPersonID.Size = new System.Drawing.Size(0, 13);
+            this.lblShowPersonID.TabIndex = 36;
+            // 
+            // lblPersonCode
+            // 
+            this.lblPersonCode.AutoSize = true;
+            this.lblPersonCode.Location = new System.Drawing.Point(232, 133);
+            this.lblPersonCode.Name = "lblPersonCode";
+            this.lblPersonCode.Size = new System.Drawing.Size(21, 13);
+            this.lblPersonCode.TabIndex = 35;
+            this.lblPersonCode.Text = "ID:";
+            // 
             // txtbxPersonEmailAddress
             // 
             this.txtbxPersonEmailAddress.Location = new System.Drawing.Point(250, 93);
@@ -412,23 +430,6 @@
             this.lblPersonFirstName.TabIndex = 19;
             this.lblPersonFirstName.Text = "First Name: ";
             // 
-            // lblPersonCode
-            // 
-            this.lblPersonCode.AutoSize = true;
-            this.lblPersonCode.Location = new System.Drawing.Point(232, 133);
-            this.lblPersonCode.Name = "lblPersonCode";
-            this.lblPersonCode.Size = new System.Drawing.Size(21, 13);
-            this.lblPersonCode.TabIndex = 35;
-            this.lblPersonCode.Text = "ID:";
-            // 
-            // lblShowPersonID
-            // 
-            this.lblShowPersonID.AutoSize = true;
-            this.lblShowPersonID.Location = new System.Drawing.Point(259, 133);
-            this.lblShowPersonID.Name = "lblShowPersonID";
-            this.lblShowPersonID.Size = new System.Drawing.Size(0, 13);
-            this.lblShowPersonID.TabIndex = 36;
-            // 
             // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,6 +438,7 @@
             this.ClientSize = new System.Drawing.Size(761, 411);
             this.Controls.Add(this.grpbxPeople);
             this.Controls.Add(this.grpbxProducts);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagementForm";
             this.Text = "Store Management";
             this.Load += new System.EventHandler(this.ManagementForm_Load);

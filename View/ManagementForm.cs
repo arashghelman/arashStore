@@ -40,7 +40,7 @@ namespace View
         private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //nmrcUpDwnProductQuantity.Value = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            nmrcUpDwnProductQuantity.Value = decimal.Parse(dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString());             
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
