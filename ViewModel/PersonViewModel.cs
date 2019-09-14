@@ -20,7 +20,7 @@ namespace ViewModel
         #endregion
 
         #region [- Add(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
-        public void Add(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
+        public void Add(string firstName, string lastName, int birthYear, string sex, string phoneNumber, string emailAddress)
         {
             Ref_PersonCrud.Insert(firstName, lastName, birthYear, sex, phoneNumber, emailAddress);
         }
@@ -34,7 +34,7 @@ namespace ViewModel
         #endregion
 
         #region [- Edit(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
-        public void Edit(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
+        public void Edit(int id, string firstName, string lastName, int birthYear, string sex, string phoneNumber, string emailAddress)
         {
             Ref_PersonCrud.Update(id, firstName, lastName, birthYear, sex, phoneNumber, emailAddress);
         }

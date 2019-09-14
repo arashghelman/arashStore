@@ -184,7 +184,7 @@ namespace View
                 txtbxLastName.Text,
                 Convert.ToInt32(txtbxBirthYear.Text),
                 cmbbxSex.Text,
-                Convert.ToInt32(txtbxPhoneNumber.Text),
+                txtbxPhoneNumber.Text,
                 txtbxEmailAddress.Text
                 );
         }

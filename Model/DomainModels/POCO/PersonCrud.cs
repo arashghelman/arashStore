@@ -29,7 +29,7 @@ namespace Model.DomainModels.POCO
         #endregion
 
         #region [- Insert(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
-        public void Insert(string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
+        public void Insert(string firstName, string lastName, int birthYear, string sex, string phoneNumber, string emailAddress)
         {
             using (var context = new DTO.EF.StoreEntities())
             {
@@ -94,7 +94,7 @@ namespace Model.DomainModels.POCO
 
         #region [- Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
 
-        public void Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress)
+        public void Update(int id, string firstName, string lastName, int birthYear, string sex, string phoneNumber, string emailAddress)
         {
             using (var context = new DTO.EF.StoreEntities())
             {

@@ -57,27 +57,58 @@ namespace View
         #region [- BtnProductAdd_Click -]
         private void BtnProductAdd_Click_1(object sender, EventArgs e)
         {
-            Ref_ProductViewModel.Add
-                (
-                txtbxProductName.Text,
-                Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
-                Convert.ToDecimal(txtbxProductUnitPrice.Text),
-                Convert.ToDecimal(txtbxProductDiscount.Text),
-                AddImage()
-                );
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to add a new product?","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(dialogResult==DialogResult.Yes)
+            {
+                MessageBox.Show("You have added a new product. ");
+                Ref_ProductViewModel.Add
+                                (
+                                txtbxProductName.Text,
+                                Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
+                                Convert.ToDecimal(txtbxProductUnitPrice.Text),
+                                Convert.ToDecimal(txtbxProductDiscount.Text),
+                                AddImage()
+                                );
+                EmptyProductFields();
+            }
+            if (dialogResult==DialogResult.No)
+            {
+                EmptyProductFields();
+            }
+            
         }
         #endregion
 
         #region [- BtnProductRemove_Click -]
         private void BtnProductRemove_Click(object sender, EventArgs e)
         {
-            Ref_ProductViewModel.Remove();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove existing product?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show("Product is removed.");
+                Ref_ProductViewModel.Remove();
+                EmptyProductFields();
+            }
+            if (dialogResult == DialogResult.No)
+            {
+                EmptyProductFields();
+            }
         }
         #endregion
 
         #region [- BtnProductEdit_Click -]
         private void BtnProductEdit_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to change product info?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult==DialogResult.Yes)
+            {
+                MessageBox.Show("Changes are added.");
+                EmptyProductFields();
+            }
+            if (dialogResult==DialogResult.No)
+            {
+                EmptyProductFields();
+            }
         }
         #endregion
 
@@ -118,23 +149,44 @@ namespace View
         #region [- BtnPersonRemove_Click -]
         private void BtnPersonRemove_Click(object sender, EventArgs e)
         {
-            Ref_PersonViewModel.Remove();
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove this person?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult==DialogResult.Yes)
+            {
+                MessageBox.Show("Person is removed.");
+                Ref_PersonViewModel.Remove();
+                EmptyPersonFiels();
+            }
+            if (dialogResult==DialogResult.No)
+            {
+                EmptyPersonFiels();
+            }
+
         }
         #endregion
 
         #region [- BtnPersonEdit_Click -]
         private void BtnPersonEdit_Click(object sender, EventArgs e)
         {
-            Ref_PersonViewModel.Edit
-                (
-                Convert.ToInt32(lblShowPersonID.Text),
-                txtbxPersonFirstName.Text,
-                txtbxPersonLastName.Text,
-                Convert.ToInt32(txtbxPersonBirthYear.Text),
-                cmbbxPersonSex.Text,
-                Convert.ToInt32(txtbxPersonPhoneNumber.Text),
-                txtbxPersonEmailAddress.Text
-                );
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to change this person's info?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult==DialogResult.Yes)
+            {
+                MessageBox.Show("Person's info changed.");
+                Ref_PersonViewModel.Edit
+                                (
+                                Convert.ToInt32(lblShowPersonID.Text),
+                                txtbxPersonFirstName.Text,
+                                txtbxPersonLastName.Text,
+                                Convert.ToInt32(txtbxPersonBirthYear.Text),
+                                cmbbxPersonSex.Text,
+                                txtbxPersonPhoneNumber.Text,
+                                txtbxPersonEmailAddress.Text
+                                );
+                EmptyPersonFiels();
+            }
+            if (dialogResult==DialogResult.No)
+            {
+                EmptyPersonFiels();
+            }           
         }
         #endregion
 
@@ -151,5 +203,26 @@ namespace View
         {
             DataGridViewCellEventArgs e;
         }
+
+        private void EmptyProductFields()
+        {
+            txtbxProductName.Text = string.Empty;
+            txtbxProductUnitPrice.Text = string.Empty;
+            nmrcUpDwnProductQuantity.Value = 0;
+            txtbxProductDiscount.Text = string.Empty;
+            lblFileName.Text = string.Empty;
+        }
+
+        private void EmptyPersonFiels()
+        {
+            txtbxPersonFirstName.Text = string.Empty;
+            txtbxPersonLastName.Text = string.Empty;
+            txtbxPersonBirthYear.Text = string.Empty;
+            txtbxPersonPhoneNumber.Text = string.Empty;
+            txtbxPersonEmailAddress.Text = string.Empty;
+            cmbbxPersonSex.Text = string.Empty;
+            lblShowPersonID.Text = string.Empty;
+        }
+
     }
 }

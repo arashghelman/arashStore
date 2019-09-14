@@ -216,6 +216,7 @@
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Location = new System.Drawing.Point(6, 208);
             this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowTemplate.Height = 40;
             this.dgvProducts.Size = new System.Drawing.Size(355, 178);
             this.dgvProducts.TabIndex = 17;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellClick);

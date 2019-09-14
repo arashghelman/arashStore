@@ -15,8 +15,8 @@
           <Property Name="BirthYear" Type="int" Nullable="false" />
           <Property Name="Age" Type="int" Nullable="false" />
           <Property Name="Sex" Type="nvarchar" MaxLength="50" />
-          <Property Name="PhoneNumber" Type="int" Nullable="false" />
-          <Property Name="EmailAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="EmailAddress" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -48,8 +48,8 @@
           <Property Name="BirthYear" Type="Int32" Nullable="false" />
           <Property Name="Age" Type="Int32" Nullable="false" />
           <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
-          <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Product">
           <Key>

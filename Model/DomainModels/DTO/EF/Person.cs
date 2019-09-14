@@ -20,7 +20,7 @@ namespace Model.DomainModels.DTO.EF
         public int BirthYear { get; set; }
         public int Age { get; set; }
         public string Sex { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string EmailAddress { get; set; }
     }
 }
