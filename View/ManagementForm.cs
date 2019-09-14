@@ -40,7 +40,7 @@ namespace View
         private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //nmrcUpDwnProductQuantity.TextAlign = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            //nmrcUpDwnProductQuantity.Value = dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
         }
@@ -60,7 +60,7 @@ namespace View
             Ref_ProductViewModel.Add
                 (
                 txtbxProductName.Text,
-                Convert.ToInt32(nmrcUpDwnProductQuantity.TextAlign),
+                Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
                 Convert.ToDecimal(txtbxProductUnitPrice.Text),
                 Convert.ToDecimal(txtbxProductDiscount.Text),
                 AddImage()
