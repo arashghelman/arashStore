@@ -27,6 +27,7 @@ namespace View
             dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
             HideColumns();
             StretchImageLayout();
+            ColorDataGridViewRows();
 
         }
 
@@ -65,6 +66,25 @@ namespace View
         {
             dgvProducts.Columns["Code"].Visible = false;
             dgvProducts.Columns["Quantity"].Visible = false;
+        }
+        #endregion
+
+        #region [- ColorDataGridViewRows() -]
+        private void ColorDataGridViewRows()
+        {
+            int i = 0;
+            int j = i + 1;
+            foreach (DataGridViewRow row in dgvProducts.Rows)
+            {
+                if (row.Index == i)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightPink;
+                }
+                if (row.Index == j)
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
         } 
         #endregion
 
