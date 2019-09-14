@@ -44,10 +44,10 @@
             this.dgvProducts.AllowUserToDeleteRows = false;
             this.dgvProducts.BackgroundColor = System.Drawing.Color.Gold;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(65, 38);
+            this.dgvProducts.Location = new System.Drawing.Point(173, 39);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowTemplate.Height = 60;
-            this.dgvProducts.Size = new System.Drawing.Size(635, 315);
+            this.dgvProducts.Size = new System.Drawing.Size(429, 315);
             this.dgvProducts.TabIndex = 0;
             // 
             // productViewModelBindingSource

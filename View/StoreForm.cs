@@ -25,6 +25,7 @@ namespace View
         private void StoreForm_Load(object sender, EventArgs e)
         {
             dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
+            HideColumns();
             StretchImageLayout();
 
         }
@@ -57,6 +58,14 @@ namespace View
                     break;
                 }
         }
+        #endregion
+
+        #region [- HideColumns() -]
+        private void HideColumns()
+        {
+            dgvProducts.Columns["Code"].Visible = false;
+            dgvProducts.Columns["Quantity"].Visible = false;
+        } 
         #endregion
 
     }
