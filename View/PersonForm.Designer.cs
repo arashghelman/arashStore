@@ -54,6 +54,10 @@
             this.grpbxPurchaseInfo = new System.Windows.Forms.GroupBox();
             this.lblPurchaseInfo = new System.Windows.Forms.Label();
             this.lblEmailError = new System.Windows.Forms.Label();
+            this.lblFirstNameHint = new System.Windows.Forms.Label();
+            this.lblLastNameHint = new System.Windows.Forms.Label();
+            this.lblBirthYearHint = new System.Windows.Forms.Label();
+            this.lblPhoneNumberHint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grpbxPurchaseInfo.SuspendLayout();
             this.SuspendLayout();
@@ -251,11 +255,51 @@
             this.lblEmailError.Size = new System.Drawing.Size(0, 13);
             this.lblEmailError.TabIndex = 24;
             // 
+            // lblFirstNameHint
+            // 
+            this.lblFirstNameHint.AutoSize = true;
+            this.lblFirstNameHint.ForeColor = System.Drawing.Color.Red;
+            this.lblFirstNameHint.Location = new System.Drawing.Point(49, 55);
+            this.lblFirstNameHint.Name = "lblFirstNameHint";
+            this.lblFirstNameHint.Size = new System.Drawing.Size(0, 13);
+            this.lblFirstNameHint.TabIndex = 25;
+            // 
+            // lblLastNameHint
+            // 
+            this.lblLastNameHint.AutoSize = true;
+            this.lblLastNameHint.ForeColor = System.Drawing.Color.Red;
+            this.lblLastNameHint.Location = new System.Drawing.Point(49, 78);
+            this.lblLastNameHint.Name = "lblLastNameHint";
+            this.lblLastNameHint.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNameHint.TabIndex = 26;
+            // 
+            // lblBirthYearHint
+            // 
+            this.lblBirthYearHint.AutoSize = true;
+            this.lblBirthYearHint.ForeColor = System.Drawing.Color.Red;
+            this.lblBirthYearHint.Location = new System.Drawing.Point(49, 111);
+            this.lblBirthYearHint.Name = "lblBirthYearHint";
+            this.lblBirthYearHint.Size = new System.Drawing.Size(0, 13);
+            this.lblBirthYearHint.TabIndex = 27;
+            // 
+            // lblPhoneNumberHint
+            // 
+            this.lblPhoneNumberHint.AutoSize = true;
+            this.lblPhoneNumberHint.ForeColor = System.Drawing.Color.Red;
+            this.lblPhoneNumberHint.Location = new System.Drawing.Point(49, 166);
+            this.lblPhoneNumberHint.Name = "lblPhoneNumberHint";
+            this.lblPhoneNumberHint.Size = new System.Drawing.Size(0, 13);
+            this.lblPhoneNumberHint.TabIndex = 28;
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 411);
+            this.Controls.Add(this.lblPhoneNumberHint);
+            this.Controls.Add(this.lblBirthYearHint);
+            this.Controls.Add(this.lblLastNameHint);
+            this.Controls.Add(this.lblFirstNameHint);
             this.Controls.Add(this.lblEmailError);
             this.Controls.Add(this.grpbxPurchaseInfo);
             this.Controls.Add(this.button1);
@@ -315,5 +359,9 @@
         private System.Windows.Forms.GroupBox grpbxPurchaseInfo;
         private System.Windows.Forms.Label lblPurchaseInfo;
         private System.Windows.Forms.Label lblEmailError;
+        private System.Windows.Forms.Label lblLastNameHint;
+        private System.Windows.Forms.Label lblFirstNameHint;
+        private System.Windows.Forms.Label lblPhoneNumberHint;
+        private System.Windows.Forms.Label lblBirthYearHint;
     }
 }

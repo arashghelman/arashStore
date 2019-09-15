@@ -27,6 +27,7 @@ namespace View
         {
             cmbbxSex.Items.AddRange(new string[] { "Male", "Female" });
             AssignToolTip();
+            SetMandatoryHint();
         }
         #endregion
 
@@ -124,8 +125,14 @@ namespace View
                     lblErrorBirthYear.Text = string.Empty;
                 }
             }
+            //if (Convert.ToInt32(txtbxBirthYear.Text) > 2019 || Convert.ToInt32(txtbxBirthYear.Text) < 0)
+            //{
+            //    errorProvider1.SetError(txtbxBirthYear, "Invalid Date");
+            //}
         }
         #endregion
+
+        
 
         #region [- TxtbxPhoneNumber_Leave -]
         private void TxtbxPhoneNumber_Leave(object sender, EventArgs e)
@@ -190,9 +197,18 @@ namespace View
         }
         #endregion
 
+        #region [- SetMandatoryHint() -]
+        private void SetMandatoryHint()
+        {
+            string hint = "*";
+            lblFirstNameHint.Text = hint;
+            lblLastNameHint.Text = hint;
+            lblPhoneNumberHint.Text = hint;
+            lblBirthYearHint.Text = hint;
+        } 
+        #endregion
 
-        
-        
+
 
 
 
@@ -212,8 +228,8 @@ namespace View
         {
             ManagementForm Ref = new ManagementForm();
             Ref.Show();
-        }      
         }
+    }
 
 
         //public void DetectEachChar(string text, string hint)

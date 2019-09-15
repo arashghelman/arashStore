@@ -28,7 +28,6 @@ namespace View
             HideColumns();
             StretchImageLayout();
             ColorDataGridViewRows();
-
         }
 
         public static Image ConvertToImage(Binary iBinary)
@@ -85,8 +84,15 @@ namespace View
                     row.DefaultCellStyle.BackColor = Color.White;
                 }
             }
-        } 
+        }
+
+
         #endregion
 
+        private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PersonForm Ref_PersonForm = new PersonForm();
+            Ref_PersonForm.Show();
+        }
     }
 }
