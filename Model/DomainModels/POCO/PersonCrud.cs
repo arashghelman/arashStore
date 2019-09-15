@@ -92,8 +92,8 @@ namespace Model.DomainModels.POCO
         }
         #endregion
 
-        #region [- Update(int id, string firstName, string lastName, int birthYear, string sex, int phoneNumber, string emailAddress) -]
-        public void Update(int id, string firstName, string lastName, int birthYear, string sex, string phoneNumber, string emailAddress)
+        #region [- Update(int id, string firstName, string lastName, int birthYear, int age, string sex, int phoneNumber, string emailAddress) -]
+        public void Update(int id, string firstName, string lastName, int birthYear, int age, string sex, string phoneNumber, string emailAddress)
         {
             using (var context = new DTO.EF.StoreEntities())
             {
@@ -105,6 +105,7 @@ namespace Model.DomainModels.POCO
                         q.FirstName = firstName;
                         q.LastName = lastName;
                         q.BirthYear = birthYear;
+                        q.Age = CalculateAge(birthYear);
                         q.Sex = sex;
                         q.PhoneNumber = phoneNumber;
                         q.EmailAddress = emailAddress;

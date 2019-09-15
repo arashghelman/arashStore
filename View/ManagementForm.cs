@@ -169,6 +169,7 @@ namespace View
             txtbxPersonFirstName.Text = dgvPerson.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtbxPersonLastName.Text = dgvPerson.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtbxPersonBirthYear.Text = dgvPerson.Rows[e.RowIndex].Cells[3].Value.ToString();
+            lblShowPersonAge.Text = dgvPerson.Rows[e.RowIndex].Cells[4].Value.ToString();
             cmbbxPersonSex.Text = dgvPerson.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtbxPersonPhoneNumber.Text = dgvPerson.Rows[e.RowIndex].Cells[6].Value.ToString();
             txtbxPersonEmailAddress.Text = dgvPerson.Rows[e.RowIndex].Cells[7].Value.ToString();
@@ -207,6 +208,7 @@ namespace View
                                 txtbxPersonFirstName.Text,
                                 txtbxPersonLastName.Text,
                                 Convert.ToInt32(txtbxPersonBirthYear.Text),
+                                Convert.ToInt32(lblShowPersonAge.Text),
                                 cmbbxPersonSex.Text,
                                 txtbxPersonPhoneNumber.Text,
                                 txtbxPersonEmailAddress.Text
@@ -235,6 +237,7 @@ namespace View
             txtbxPersonFirstName.Text = string.Empty;
             txtbxPersonLastName.Text = string.Empty;
             txtbxPersonBirthYear.Text = string.Empty;
+            lblShowPersonAge.Text = string.Empty;
             txtbxPersonPhoneNumber.Text = string.Empty;
             txtbxPersonEmailAddress.Text = string.Empty;
             cmbbxPersonSex.Text = string.Empty;
@@ -246,25 +249,22 @@ namespace View
         private void RefreshPersonGridView()
         {
             dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
-        } 
-        #endregion
-
-        #endregion
-
-
-        public void InitializeID()
-        {
-            DataGridViewCellEventArgs e;
         }
+        #endregion
 
-        
+        #endregion
 
-        
+
+
+
+
 
         private byte[] ConvertToByte()
         {
             byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
             return bytes;
         }
+
+
     }
 }

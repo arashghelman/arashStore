@@ -43,6 +43,8 @@
             this.btnProductAdd = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
             this.grpbxProducts = new System.Windows.Forms.GroupBox();
+            this.lblShowProductCode = new System.Windows.Forms.Label();
+            this.lblProductCode = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.btnProductRefresh = new System.Windows.Forms.Button();
             this.btnProductEdit = new System.Windows.Forms.Button();
@@ -66,8 +68,8 @@
             this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
             this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
-            this.lblProductCode = new System.Windows.Forms.Label();
-            this.lblShowProductCode = new System.Windows.Forms.Label();
+            this.lblPersonAge = new System.Windows.Forms.Label();
+            this.lblShowPersonAge = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
             this.grpbxProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -215,6 +217,23 @@
             this.grpbxProducts.TabStop = false;
             this.grpbxProducts.Text = "Manage Products";
             // 
+            // lblShowProductCode
+            // 
+            this.lblShowProductCode.AutoSize = true;
+            this.lblShowProductCode.Location = new System.Drawing.Point(298, 163);
+            this.lblShowProductCode.Name = "lblShowProductCode";
+            this.lblShowProductCode.Size = new System.Drawing.Size(0, 13);
+            this.lblShowProductCode.TabIndex = 19;
+            // 
+            // lblProductCode
+            // 
+            this.lblProductCode.AutoSize = true;
+            this.lblProductCode.Location = new System.Drawing.Point(258, 161);
+            this.lblProductCode.Name = "lblProductCode";
+            this.lblProductCode.Size = new System.Drawing.Size(35, 13);
+            this.lblProductCode.TabIndex = 18;
+            this.lblProductCode.Text = "Code:";
+            // 
             // dgvProducts
             // 
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -257,6 +276,8 @@
             // 
             // grpbxPeople
             // 
+            this.grpbxPeople.Controls.Add(this.lblShowPersonAge);
+            this.grpbxPeople.Controls.Add(this.lblPersonAge);
             this.grpbxPeople.Controls.Add(this.lblShowPersonID);
             this.grpbxPeople.Controls.Add(this.lblPersonCode);
             this.grpbxPeople.Controls.Add(this.txtbxPersonEmailAddress);
@@ -435,22 +456,22 @@
             this.lblPersonFirstName.TabIndex = 19;
             this.lblPersonFirstName.Text = "First Name: ";
             // 
-            // lblProductCode
+            // lblPersonAge
             // 
-            this.lblProductCode.AutoSize = true;
-            this.lblProductCode.Location = new System.Drawing.Point(258, 161);
-            this.lblProductCode.Name = "lblProductCode";
-            this.lblProductCode.Size = new System.Drawing.Size(35, 13);
-            this.lblProductCode.TabIndex = 18;
-            this.lblProductCode.Text = "Code:";
+            this.lblPersonAge.AutoSize = true;
+            this.lblPersonAge.Location = new System.Drawing.Point(224, 152);
+            this.lblPersonAge.Name = "lblPersonAge";
+            this.lblPersonAge.Size = new System.Drawing.Size(29, 13);
+            this.lblPersonAge.TabIndex = 37;
+            this.lblPersonAge.Text = "Age:";
             // 
-            // lblShowProductCode
+            // lblShowPersonAge
             // 
-            this.lblShowProductCode.AutoSize = true;
-            this.lblShowProductCode.Location = new System.Drawing.Point(298, 163);
-            this.lblShowProductCode.Name = "lblShowProductCode";
-            this.lblShowProductCode.Size = new System.Drawing.Size(0, 13);
-            this.lblShowProductCode.TabIndex = 19;
+            this.lblShowPersonAge.AutoSize = true;
+            this.lblShowPersonAge.Location = new System.Drawing.Point(259, 152);
+            this.lblShowPersonAge.Name = "lblShowPersonAge";
+            this.lblShowPersonAge.Size = new System.Drawing.Size(0, 13);
+            this.lblShowPersonAge.TabIndex = 38;
             // 
             // ManagementForm
             // 
@@ -516,5 +537,7 @@
         private System.Windows.Forms.Label lblPersonCode;
         private System.Windows.Forms.Label lblShowProductCode;
         private System.Windows.Forms.Label lblProductCode;
+        private System.Windows.Forms.Label lblShowPersonAge;
+        private System.Windows.Forms.Label lblPersonAge;
     }
 }
