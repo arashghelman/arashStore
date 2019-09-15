@@ -78,6 +78,47 @@ namespace Model.DomainModels.POCO
                     }
                 }
             }
+        }
+        #endregion
+
+        #region [- Update(int code, string name, decimal discount, decimal unitPrice, byte[] image) -]
+        public void Update(int code, string name, decimal discount, decimal unitPrice, byte[] image)
+        {
+            using (var context = new DTO.EF.StoreEntities())
+            {
+                try
+                {
+                    var q = context.Products.FirstOrDefault(x => x.Code == code) as DTO.EF.Product;
+                    if (q != null)
+                    {
+                        q.Name = name;
+                        q.Discount = discount;
+                        q.UnitPrice = unitPrice;
+                        q.Image = image;
+                        context.Entry(q).CurrentValues.SetValues(context.Products);
+                        context.SaveChanges();
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    throw new NullReferenceException();
+                }
+                catch (ArgumentNullException)
+                {
+                    throw new ArgumentNullException();
+                }
+                catch (Exception)
+                {
+                    throw new Exception();
+                }
+                finally
+                {
+                    if (context != null)
+                    {
+                        context.Dispose();
+                    }
+                }
+            }
         } 
         #endregion
 

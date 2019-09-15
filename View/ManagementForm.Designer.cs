@@ -66,6 +66,8 @@
             this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
             this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
+            this.lblProductCode = new System.Windows.Forms.Label();
+            this.lblShowProductCode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
             this.grpbxProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -188,6 +190,8 @@
             // 
             // grpbxProducts
             // 
+            this.grpbxProducts.Controls.Add(this.lblShowProductCode);
+            this.grpbxProducts.Controls.Add(this.lblProductCode);
             this.grpbxProducts.Controls.Add(this.dgvProducts);
             this.grpbxProducts.Controls.Add(this.btnProductRefresh);
             this.grpbxProducts.Controls.Add(this.btnProductEdit);
@@ -431,6 +435,23 @@
             this.lblPersonFirstName.TabIndex = 19;
             this.lblPersonFirstName.Text = "First Name: ";
             // 
+            // lblProductCode
+            // 
+            this.lblProductCode.AutoSize = true;
+            this.lblProductCode.Location = new System.Drawing.Point(258, 161);
+            this.lblProductCode.Name = "lblProductCode";
+            this.lblProductCode.Size = new System.Drawing.Size(35, 13);
+            this.lblProductCode.TabIndex = 18;
+            this.lblProductCode.Text = "Code:";
+            // 
+            // lblShowProductCode
+            // 
+            this.lblShowProductCode.AutoSize = true;
+            this.lblShowProductCode.Location = new System.Drawing.Point(298, 163);
+            this.lblShowProductCode.Name = "lblShowProductCode";
+            this.lblShowProductCode.Size = new System.Drawing.Size(0, 13);
+            this.lblShowProductCode.TabIndex = 19;
+            // 
             // ManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,5 +514,7 @@
         private System.Windows.Forms.Label lblPersonEmailAddress;
         private System.Windows.Forms.Label lblShowPersonID;
         private System.Windows.Forms.Label lblPersonCode;
+        private System.Windows.Forms.Label lblShowProductCode;
+        private System.Windows.Forms.Label lblProductCode;
     }
 }

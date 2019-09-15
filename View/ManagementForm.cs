@@ -69,6 +69,7 @@ namespace View
                                 Convert.ToDecimal(txtbxProductDiscount.Text),
                                 AddImage()
                                 );
+                RefreshProductsGridView();
                 EmptyProductFields();
             }
             if (dialogResult==DialogResult.No)
@@ -87,6 +88,8 @@ namespace View
             {
                 MessageBox.Show("Product is removed.");
                 Ref_ProductViewModel.Remove();
+
+                RefreshProductsGridView();
                 EmptyProductFields();
             }
             if (dialogResult == DialogResult.No)
@@ -103,6 +106,14 @@ namespace View
             if (dialogResult==DialogResult.Yes)
             {
                 MessageBox.Show("Changes are added.");
+                Ref_ProductViewModel.Edit(
+                    Convert.ToInt32(lblShowProductCode.Text),
+                    txtbxProductName.Text,
+                    Convert.ToDecimal(txtbxProductDiscount.Text),
+                    Convert.ToDecimal(txtbxProductUnitPrice.Text),
+                    AddImage()
+                    );
+                RefreshProductsGridView();
                 EmptyProductFields();
             }
             if (dialogResult==DialogResult.No)
@@ -127,6 +138,24 @@ namespace View
             byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
             return imageByte;
         }
+        #endregion
+
+        #region [- EmptyProductFields() -]
+        private void EmptyProductFields()
+        {
+            txtbxProductName.Text = string.Empty;
+            txtbxProductUnitPrice.Text = string.Empty;
+            nmrcUpDwnProductQuantity.Value = 0;
+            txtbxProductDiscount.Text = string.Empty;
+            lblFileName.Text = string.Empty;
+        } 
+        #endregion
+
+        #region [- RefreshProductsGridView() -]
+        private void RefreshProductsGridView()
+        {
+            dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
+        } 
         #endregion
 
         #endregion
@@ -154,13 +183,14 @@ namespace View
             {
                 MessageBox.Show("Person is removed.");
                 Ref_PersonViewModel.Remove();
+
+                RefreshPersonGridView();
                 EmptyPersonFiels();
             }
             if (dialogResult==DialogResult.No)
             {
                 EmptyPersonFiels();
             }
-
         }
         #endregion
 
@@ -181,6 +211,8 @@ namespace View
                                 txtbxPersonPhoneNumber.Text,
                                 txtbxPersonEmailAddress.Text
                                 );
+
+                RefreshPersonGridView();
                 EmptyPersonFiels();
             }
             if (dialogResult==DialogResult.No)
@@ -195,24 +227,9 @@ namespace View
         {
             dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
         }
-        #endregion 
         #endregion
 
-
-        public void InitializeID()
-        {
-            DataGridViewCellEventArgs e;
-        }
-
-        private void EmptyProductFields()
-        {
-            txtbxProductName.Text = string.Empty;
-            txtbxProductUnitPrice.Text = string.Empty;
-            nmrcUpDwnProductQuantity.Value = 0;
-            txtbxProductDiscount.Text = string.Empty;
-            lblFileName.Text = string.Empty;
-        }
-
+        #region [- EmptyPersonFiels() -]
         private void EmptyPersonFiels()
         {
             txtbxPersonFirstName.Text = string.Empty;
@@ -222,7 +239,32 @@ namespace View
             txtbxPersonEmailAddress.Text = string.Empty;
             cmbbxPersonSex.Text = string.Empty;
             lblShowPersonID.Text = string.Empty;
+        } 
+        #endregion
+
+        #region [- RefreshPersonGridView() -]
+        private void RefreshPersonGridView()
+        {
+            dgvPerson.DataSource = Ref_PersonViewModel.Refresh();
+        } 
+        #endregion
+
+        #endregion
+
+
+        public void InitializeID()
+        {
+            DataGridViewCellEventArgs e;
         }
 
+        
+
+        
+
+        private byte[] ConvertToByte()
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
+            return bytes;
+        }
     }
 }
