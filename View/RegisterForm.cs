@@ -46,5 +46,15 @@ namespace View
             Ref_RegisterForm.Close();
         } 
         #endregion
+
+        private void CheckUser()
+        {
+            var streamReader = new StreamReader("C:\\" + txtbxUsername.Text + "\\login.ID");
+            string username = streamReader.ReadLine();
+            if (username==txtbxUsername.Text)
+            {
+                MessageBox.Show("This user already exists", "Information");
+            }
+        }
     }
 }

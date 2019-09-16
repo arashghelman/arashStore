@@ -50,6 +50,8 @@
             this.btnProductEdit = new System.Windows.Forms.Button();
             this.btnProductRemove = new System.Windows.Forms.Button();
             this.grpbxPeople = new System.Windows.Forms.GroupBox();
+            this.lblShowPersonAge = new System.Windows.Forms.Label();
+            this.lblPersonAge = new System.Windows.Forms.Label();
             this.lblShowPersonID = new System.Windows.Forms.Label();
             this.lblPersonCode = new System.Windows.Forms.Label();
             this.txtbxPersonEmailAddress = new System.Windows.Forms.TextBox();
@@ -68,8 +70,6 @@
             this.lblPersonPhoneNumber = new System.Windows.Forms.Label();
             this.txtbxPersonFirstName = new System.Windows.Forms.TextBox();
             this.lblPersonFirstName = new System.Windows.Forms.Label();
-            this.lblPersonAge = new System.Windows.Forms.Label();
-            this.lblShowPersonAge = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).BeginInit();
             this.grpbxProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
@@ -142,6 +142,7 @@
             this.txtbxProductUnitPrice.Name = "txtbxProductUnitPrice";
             this.txtbxProductUnitPrice.Size = new System.Drawing.Size(100, 20);
             this.txtbxProductUnitPrice.TabIndex = 9;
+            this.txtbxProductUnitPrice.TextChanged += new System.EventHandler(this.TxtbxProductUnitPrice_TextChanged);
             // 
             // nmrcUpDwnProductQuantity
             // 
@@ -303,6 +304,23 @@
             this.grpbxPeople.TabStop = false;
             this.grpbxPeople.Text = "Manage People";
             // 
+            // lblShowPersonAge
+            // 
+            this.lblShowPersonAge.AutoSize = true;
+            this.lblShowPersonAge.Location = new System.Drawing.Point(259, 152);
+            this.lblShowPersonAge.Name = "lblShowPersonAge";
+            this.lblShowPersonAge.Size = new System.Drawing.Size(0, 13);
+            this.lblShowPersonAge.TabIndex = 38;
+            // 
+            // lblPersonAge
+            // 
+            this.lblPersonAge.AutoSize = true;
+            this.lblPersonAge.Location = new System.Drawing.Point(224, 152);
+            this.lblPersonAge.Name = "lblPersonAge";
+            this.lblPersonAge.Size = new System.Drawing.Size(29, 13);
+            this.lblPersonAge.TabIndex = 37;
+            this.lblPersonAge.Text = "Age:";
+            // 
             // lblShowPersonID
             // 
             this.lblShowPersonID.AutoSize = true;
@@ -455,23 +473,6 @@
             this.lblPersonFirstName.Size = new System.Drawing.Size(63, 13);
             this.lblPersonFirstName.TabIndex = 19;
             this.lblPersonFirstName.Text = "First Name: ";
-            // 
-            // lblPersonAge
-            // 
-            this.lblPersonAge.AutoSize = true;
-            this.lblPersonAge.Location = new System.Drawing.Point(224, 152);
-            this.lblPersonAge.Name = "lblPersonAge";
-            this.lblPersonAge.Size = new System.Drawing.Size(29, 13);
-            this.lblPersonAge.TabIndex = 37;
-            this.lblPersonAge.Text = "Age:";
-            // 
-            // lblShowPersonAge
-            // 
-            this.lblShowPersonAge.AutoSize = true;
-            this.lblShowPersonAge.Location = new System.Drawing.Point(259, 152);
-            this.lblShowPersonAge.Name = "lblShowPersonAge";
-            this.lblShowPersonAge.Size = new System.Drawing.Size(0, 13);
-            this.lblShowPersonAge.TabIndex = 38;
             // 
             // ManagementForm
             // 

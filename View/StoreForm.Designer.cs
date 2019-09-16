@@ -34,6 +34,7 @@
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.productViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnManagement = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productViewModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +48,10 @@
             this.dgvProducts.Location = new System.Drawing.Point(43, 32);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowTemplate.Height = 60;
+            this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(476, 389);
             this.dgvProducts.TabIndex = 0;
-            this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellClick);
+            this.dgvProducts.Click += new System.EventHandler(this.DgvProducts_Click);
             // 
             // productViewModelBindingSource
             // 
@@ -68,6 +70,17 @@
             this.btnPurchase.UseVisualStyleBackColor = false;
             this.btnPurchase.Click += new System.EventHandler(this.BtnPurchase_Click);
             // 
+            // btnManagement
+            // 
+            this.btnManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagement.Location = new System.Drawing.Point(561, 32);
+            this.btnManagement.Name = "btnManagement";
+            this.btnManagement.Size = new System.Drawing.Size(172, 43);
+            this.btnManagement.TabIndex = 2;
+            this.btnManagement.Text = "Management";
+            this.btnManagement.UseVisualStyleBackColor = true;
+            this.btnManagement.Click += new System.EventHandler(this.BtnManagement_Click);
+            // 
             // StoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +89,7 @@
             this.BackgroundImage = global::View.Properties.Resources.Untitled_Artwork_copy;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(764, 579);
+            this.Controls.Add(this.btnManagement);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.dgvProducts);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -90,8 +104,9 @@
 
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.BindingSource productViewModelBindingSource;
         private System.Windows.Forms.Button btnPurchase;
+        private System.Windows.Forms.Button btnManagement;
+        public System.Windows.Forms.DataGridView dgvProducts;
     }
 }

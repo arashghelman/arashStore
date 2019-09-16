@@ -81,8 +81,8 @@ namespace Model.DomainModels.POCO
         }
         #endregion
 
-        #region [- Update(int code, string name, decimal discount, decimal unitPrice, byte[] image) -]
-        public void Update(int code, string name, decimal discount, decimal unitPrice, byte[] image)
+        #region [- Update(int code, string name, int quantity, decimal discount, decimal unitPrice, byte[] image) -]
+        public void Update(int code, string name, int quantity, decimal discount, decimal unitPrice, byte[] image)
         {
             using (var context = new DTO.EF.StoreEntities())
             {
@@ -92,6 +92,7 @@ namespace Model.DomainModels.POCO
                     if (q != null)
                     {
                         q.Name = name;
+                        q.Quantity = quantity;
                         q.Discount = discount;
                         q.UnitPrice = unitPrice;
                         q.Image = image;

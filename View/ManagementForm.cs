@@ -39,6 +39,7 @@ namespace View
         #region [- DgvProducts_CellClick -]
         private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblShowProductCode.Text= dgvProducts.Rows[e.RowIndex].Cells[0].Value.ToString();
             txtbxProductName.Text = dgvProducts.Rows[e.RowIndex].Cells[1].Value.ToString();
             nmrcUpDwnProductQuantity.Value = decimal.Parse(dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString());             
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -109,6 +110,7 @@ namespace View
                 Ref_ProductViewModel.Edit(
                     Convert.ToInt32(lblShowProductCode.Text),
                     txtbxProductName.Text,
+                    Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
                     Convert.ToDecimal(txtbxProductDiscount.Text),
                     Convert.ToDecimal(txtbxProductUnitPrice.Text),
                     AddImage()
@@ -155,8 +157,13 @@ namespace View
         private void RefreshProductsGridView()
         {
             dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
-        } 
+        }
         #endregion
+
+        private void TxtbxProductUnitPrice_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
         #endregion
 
@@ -264,7 +271,5 @@ namespace View
             byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
             return bytes;
         }
-
-
     }
 }

@@ -89,9 +89,22 @@ namespace View
 
         #endregion
 
-        private void DgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void BtnManagement_Click(object sender, EventArgs e)
+        {
+            LoginForm Ref_LoginForm = new LoginForm();
+            Ref_LoginForm.Show();
+        }
+
+        private void DgvProducts_Click(object sender, EventArgs e)
         {
             PersonForm Ref_PersonForm = new PersonForm();
+            string name = dgvProducts.CurrentRow.Cells[1].Value.ToString();
+            decimal unitPrice = Convert.ToDecimal(dgvProducts.CurrentRow.Cells[3].Value);
+            decimal discount = Convert.ToDecimal(dgvProducts.CurrentRow.Cells[5].Value);
+            decimal price = unitPrice - discount;
+            Ref_PersonForm.txtbxPurchaseName.Text = name;
+            Ref_PersonForm.txtbxPurchasePrice.Text = price.ToString();
             Ref_PersonForm.Show();
         }
     }

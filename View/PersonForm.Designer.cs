@@ -50,14 +50,16 @@
             this.lblErrorBirthYear = new System.Windows.Forms.Label();
             this.lblErrorPhoneNumber = new System.Windows.Forms.Label();
             this.lblErrorEmailAddress = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.grpbxPurchaseInfo = new System.Windows.Forms.GroupBox();
-            this.lblPurchaseInfo = new System.Windows.Forms.Label();
             this.lblEmailError = new System.Windows.Forms.Label();
             this.lblFirstNameHint = new System.Windows.Forms.Label();
             this.lblLastNameHint = new System.Windows.Forms.Label();
             this.lblBirthYearHint = new System.Windows.Forms.Label();
             this.lblPhoneNumberHint = new System.Windows.Forms.Label();
+            this.lblPurchaseName = new System.Windows.Forms.Label();
+            this.txtbxPurchaseName = new System.Windows.Forms.TextBox();
+            this.lblPurchasePrice = new System.Windows.Forms.Label();
+            this.txtbxPurchasePrice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grpbxPurchaseInfo.SuspendLayout();
             this.SuspendLayout();
@@ -219,33 +221,18 @@
             this.lblErrorEmailAddress.Size = new System.Drawing.Size(0, 13);
             this.lblErrorEmailAddress.TabIndex = 21;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(141, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // grpbxPurchaseInfo
             // 
-            this.grpbxPurchaseInfo.Controls.Add(this.lblPurchaseInfo);
-            this.grpbxPurchaseInfo.Location = new System.Drawing.Point(431, 28);
+            this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchasePrice);
+            this.grpbxPurchaseInfo.Controls.Add(this.lblPurchasePrice);
+            this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchaseName);
+            this.grpbxPurchaseInfo.Controls.Add(this.lblPurchaseName);
+            this.grpbxPurchaseInfo.Location = new System.Drawing.Point(435, 12);
             this.grpbxPurchaseInfo.Name = "grpbxPurchaseInfo";
-            this.grpbxPurchaseInfo.Size = new System.Drawing.Size(232, 301);
+            this.grpbxPurchaseInfo.Size = new System.Drawing.Size(314, 371);
             this.grpbxPurchaseInfo.TabIndex = 23;
             this.grpbxPurchaseInfo.TabStop = false;
             this.grpbxPurchaseInfo.Text = "Purchase Info";
-            // 
-            // lblPurchaseInfo
-            // 
-            this.lblPurchaseInfo.AutoSize = true;
-            this.lblPurchaseInfo.Location = new System.Drawing.Point(6, 24);
-            this.lblPurchaseInfo.Name = "lblPurchaseInfo";
-            this.lblPurchaseInfo.Size = new System.Drawing.Size(0, 13);
-            this.lblPurchaseInfo.TabIndex = 0;
             // 
             // lblEmailError
             // 
@@ -291,6 +278,40 @@
             this.lblPhoneNumberHint.Size = new System.Drawing.Size(0, 13);
             this.lblPhoneNumberHint.TabIndex = 28;
             // 
+            // lblPurchaseName
+            // 
+            this.lblPurchaseName.AutoSize = true;
+            this.lblPurchaseName.Location = new System.Drawing.Point(63, 39);
+            this.lblPurchaseName.Name = "lblPurchaseName";
+            this.lblPurchaseName.Size = new System.Drawing.Size(78, 13);
+            this.lblPurchaseName.TabIndex = 0;
+            this.lblPurchaseName.Text = "Product Name:";
+            // 
+            // txtbxPurchaseName
+            // 
+            this.txtbxPurchaseName.Enabled = false;
+            this.txtbxPurchaseName.Location = new System.Drawing.Point(147, 36);
+            this.txtbxPurchaseName.Name = "txtbxPurchaseName";
+            this.txtbxPurchaseName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPurchaseName.TabIndex = 1;
+            // 
+            // lblPurchasePrice
+            // 
+            this.lblPurchasePrice.AutoSize = true;
+            this.lblPurchasePrice.Location = new System.Drawing.Point(107, 66);
+            this.lblPurchasePrice.Name = "lblPurchasePrice";
+            this.lblPurchasePrice.Size = new System.Drawing.Size(34, 13);
+            this.lblPurchasePrice.TabIndex = 2;
+            this.lblPurchasePrice.Text = "Price:";
+            // 
+            // txtbxPurchasePrice
+            // 
+            this.txtbxPurchasePrice.Enabled = false;
+            this.txtbxPurchasePrice.Location = new System.Drawing.Point(147, 63);
+            this.txtbxPurchasePrice.Name = "txtbxPurchasePrice";
+            this.txtbxPurchasePrice.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPurchasePrice.TabIndex = 3;
+            // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,7 +323,6 @@
             this.Controls.Add(this.lblFirstNameHint);
             this.Controls.Add(this.lblEmailError);
             this.Controls.Add(this.grpbxPurchaseInfo);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblErrorEmailAddress);
             this.Controls.Add(this.lblErrorPhoneNumber);
             this.Controls.Add(this.lblErrorBirthYear);
@@ -355,13 +375,15 @@
         private System.Windows.Forms.Label lblErrorBirthYear;
         private System.Windows.Forms.Label lblErrorPhoneNumber;
         private System.Windows.Forms.Label lblErrorEmailAddress;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox grpbxPurchaseInfo;
-        private System.Windows.Forms.Label lblPurchaseInfo;
         private System.Windows.Forms.Label lblEmailError;
         private System.Windows.Forms.Label lblLastNameHint;
         private System.Windows.Forms.Label lblFirstNameHint;
         private System.Windows.Forms.Label lblPhoneNumberHint;
         private System.Windows.Forms.Label lblBirthYearHint;
+        private System.Windows.Forms.Label lblPurchasePrice;
+        private System.Windows.Forms.Label lblPurchaseName;
+        public System.Windows.Forms.TextBox txtbxPurchasePrice;
+        public System.Windows.Forms.TextBox txtbxPurchaseName;
     }
 }

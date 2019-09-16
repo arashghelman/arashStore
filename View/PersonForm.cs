@@ -125,14 +125,13 @@ namespace View
                     lblErrorBirthYear.Text = string.Empty;
                 }
             }
-            //if (Convert.ToInt32(txtbxBirthYear.Text) > 2019 || Convert.ToInt32(txtbxBirthYear.Text) < 0)
-            //{
-            //    errorProvider1.SetError(txtbxBirthYear, "Invalid Date");
-            //}
+            if (Convert.ToInt32(txtbxBirthYear.Text) > 2019 || Convert.ToInt32(txtbxBirthYear.Text) < 0)
+            {
+                MessageBox.Show("Invalid Date", "Error");
+                txtbxBirthYear.Text = string.Empty;
+            }
         }
         #endregion
-
-        
 
         #region [- TxtbxPhoneNumber_Leave -]
         private void TxtbxPhoneNumber_Leave(object sender, EventArgs e)
@@ -214,21 +213,11 @@ namespace View
 
         private void ShowPurchaseMessage(string message)
         {
-            //message = "You've successfully purchased these items: \n"+
-            //    "Product Name : "+
+            
         }
 
         
 
-
-
-
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            ManagementForm Ref = new ManagementForm();
-            Ref.Show();
-        }
     }
 
 
