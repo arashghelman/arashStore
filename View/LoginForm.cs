@@ -35,7 +35,7 @@ namespace View
                 string username = streamReader.ReadLine();
                 string password = streamReader.ReadLine();
                 streamReader.Close();
-                if (username == txtbxUsername.Text)
+                if (username == txtbxUsername.Text && password == txtbxPassword.Text) 
                 {
                     MessageBox.Show("You are successfully logged in", "Success");
                     ManagementForm Ref_ManagementForm = new ManagementForm();

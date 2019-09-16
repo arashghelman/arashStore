@@ -63,7 +63,7 @@ namespace View
                 }
                 if (hasDigit)
                 {
-                    string hint = "You should only enter characters!";
+                    string hint = "only characters!";
                     lblErrorFirstName.Text = hint;
                     errorProvider1.SetError(txtbxFirstName, lblErrorFirstName.Text);
                 }
@@ -89,7 +89,7 @@ namespace View
                 }
                 if (hasDigit)
                 {
-                    string hint = "You should only enter characters!";
+                    string hint = "only characters!";
                     lblErrorLastName.Text = hint;
                     errorProvider1.SetError(txtbxLastName, lblErrorLastName.Text);
                 }
@@ -115,7 +115,7 @@ namespace View
                 }
                 if (!hasDigit)
                 {
-                    string hint = "You should only enter numbers!";
+                    string hint = "only numbers!";
                     lblErrorBirthYear.Text = hint;
                     errorProvider1.SetError(txtbxBirthYear, lblErrorBirthYear.Text);
                 }
@@ -141,7 +141,7 @@ namespace View
                 }
                 if (!hasDigit)
                 {
-                    string hint = "You should only enter numbers!";
+                    string hint = "only numbers!";
                     lblErrorPhoneNumber.Text = hint;
                     errorProvider1.SetError(txtbxPhoneNumber, lblErrorPhoneNumber.Text);
                 }
@@ -211,8 +211,10 @@ namespace View
             
         }
 
-        
+        private void TxtbxPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 

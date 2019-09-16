@@ -51,16 +51,16 @@
             this.lblErrorPhoneNumber = new System.Windows.Forms.Label();
             this.lblErrorEmailAddress = new System.Windows.Forms.Label();
             this.grpbxPurchaseInfo = new System.Windows.Forms.GroupBox();
+            this.pctrbxPurchase = new System.Windows.Forms.PictureBox();
+            this.txtbxPurchasePrice = new System.Windows.Forms.TextBox();
+            this.lblPurchasePrice = new System.Windows.Forms.Label();
+            this.txtbxPurchaseName = new System.Windows.Forms.TextBox();
+            this.lblPurchaseName = new System.Windows.Forms.Label();
             this.lblEmailError = new System.Windows.Forms.Label();
             this.lblFirstNameHint = new System.Windows.Forms.Label();
             this.lblLastNameHint = new System.Windows.Forms.Label();
             this.lblBirthYearHint = new System.Windows.Forms.Label();
             this.lblPhoneNumberHint = new System.Windows.Forms.Label();
-            this.lblPurchaseName = new System.Windows.Forms.Label();
-            this.txtbxPurchaseName = new System.Windows.Forms.TextBox();
-            this.lblPurchasePrice = new System.Windows.Forms.Label();
-            this.txtbxPurchasePrice = new System.Windows.Forms.TextBox();
-            this.pctrbxPurchase = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grpbxPurchaseInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctrbxPurchase)).BeginInit();
@@ -69,110 +69,130 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(65, 55);
+            this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(31, 52);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(63, 13);
+            this.lblFirstName.Size = new System.Drawing.Size(94, 20);
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name: ";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(65, 81);
+            this.lblLastName.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(31, 106);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(64, 13);
+            this.lblLastName.Size = new System.Drawing.Size(94, 20);
             this.lblLastName.TabIndex = 1;
             this.lblLastName.Text = "Last Name: ";
             // 
             // lblBirthYear
             // 
             this.lblBirthYear.AutoSize = true;
-            this.lblBirthYear.Location = new System.Drawing.Point(65, 111);
+            this.lblBirthYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblBirthYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthYear.Location = new System.Drawing.Point(31, 158);
             this.lblBirthYear.Name = "lblBirthYear";
-            this.lblBirthYear.Size = new System.Drawing.Size(56, 13);
+            this.lblBirthYear.Size = new System.Drawing.Size(84, 20);
             this.lblBirthYear.TabIndex = 2;
             this.lblBirthYear.Text = "Birth Year:";
             // 
             // lblSex
             // 
             this.lblSex.AutoSize = true;
-            this.lblSex.Location = new System.Drawing.Point(65, 141);
+            this.lblSex.BackColor = System.Drawing.Color.Transparent;
+            this.lblSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(31, 208);
             this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(31, 13);
+            this.lblSex.Size = new System.Drawing.Size(44, 20);
             this.lblSex.TabIndex = 3;
             this.lblSex.Text = "Sex: ";
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(65, 166);
+            this.lblPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(31, 266);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(81, 13);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(119, 20);
             this.lblPhoneNumber.TabIndex = 4;
             this.lblPhoneNumber.Text = "Phone Number:";
             // 
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.Location = new System.Drawing.Point(65, 198);
+            this.lblEmailAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAddress.Location = new System.Drawing.Point(31, 333);
             this.lblEmailAddress.Name = "lblEmailAddress";
-            this.lblEmailAddress.Size = new System.Drawing.Size(76, 13);
+            this.lblEmailAddress.Size = new System.Drawing.Size(115, 20);
             this.lblEmailAddress.TabIndex = 5;
             this.lblEmailAddress.Text = "Email Address:";
             // 
             // txtbxFirstName
             // 
-            this.txtbxFirstName.Location = new System.Drawing.Point(143, 52);
+            this.txtbxFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxFirstName.Location = new System.Drawing.Point(146, 49);
             this.txtbxFirstName.Name = "txtbxFirstName";
-            this.txtbxFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxFirstName.Size = new System.Drawing.Size(148, 26);
             this.txtbxFirstName.TabIndex = 6;
             this.txtbxFirstName.TextChanged += new System.EventHandler(this.TxtbxFirstName_TextChanged);
             // 
             // txtbxLastName
             // 
-            this.txtbxLastName.Location = new System.Drawing.Point(143, 78);
+            this.txtbxLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxLastName.Location = new System.Drawing.Point(146, 103);
             this.txtbxLastName.Name = "txtbxLastName";
-            this.txtbxLastName.Size = new System.Drawing.Size(100, 20);
+            this.txtbxLastName.Size = new System.Drawing.Size(148, 26);
             this.txtbxLastName.TabIndex = 7;
             this.txtbxLastName.TextChanged += new System.EventHandler(this.TxtbxLastName_TextChanged);
             // 
             // txtbxBirthYear
             // 
-            this.txtbxBirthYear.Location = new System.Drawing.Point(143, 104);
+            this.txtbxBirthYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxBirthYear.Location = new System.Drawing.Point(146, 155);
             this.txtbxBirthYear.Name = "txtbxBirthYear";
-            this.txtbxBirthYear.Size = new System.Drawing.Size(100, 20);
+            this.txtbxBirthYear.Size = new System.Drawing.Size(148, 26);
             this.txtbxBirthYear.TabIndex = 8;
             this.txtbxBirthYear.TextChanged += new System.EventHandler(this.TxtbxBirthYear_TextChanged);
             // 
             // txtbxPhoneNumber
             // 
-            this.txtbxPhoneNumber.Location = new System.Drawing.Point(162, 163);
+            this.txtbxPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPhoneNumber.Location = new System.Drawing.Point(171, 263);
             this.txtbxPhoneNumber.Name = "txtbxPhoneNumber";
-            this.txtbxPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPhoneNumber.Size = new System.Drawing.Size(123, 26);
             this.txtbxPhoneNumber.TabIndex = 9;
+            this.txtbxPhoneNumber.TextChanged += new System.EventHandler(this.TxtbxPhoneNumber_TextChanged);
             this.txtbxPhoneNumber.Leave += new System.EventHandler(this.TxtbxPhoneNumber_Leave);
             // 
             // txtbxEmailAddress
             // 
-            this.txtbxEmailAddress.Location = new System.Drawing.Point(162, 195);
+            this.txtbxEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEmailAddress.Location = new System.Drawing.Point(171, 330);
             this.txtbxEmailAddress.Name = "txtbxEmailAddress";
-            this.txtbxEmailAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtbxEmailAddress.Size = new System.Drawing.Size(123, 26);
             this.txtbxEmailAddress.TabIndex = 10;
             this.txtbxEmailAddress.Leave += new System.EventHandler(this.TxtbxEmailAddress_Leave);
             // 
             // cmbbxSex
             // 
+            this.cmbbxSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbbxSex.FormattingEnabled = true;
-            this.cmbbxSex.Location = new System.Drawing.Point(141, 133);
+            this.cmbbxSex.Location = new System.Drawing.Point(146, 207);
             this.cmbbxSex.Name = "cmbbxSex";
-            this.cmbbxSex.Size = new System.Drawing.Size(121, 21);
+            this.cmbbxSex.Size = new System.Drawing.Size(148, 28);
             this.cmbbxSex.TabIndex = 11;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(168, 237);
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(88, 426);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(163, 40);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -186,148 +206,176 @@
             // lblErrorFirstName
             // 
             this.lblErrorFirstName.AutoSize = true;
-            this.lblErrorFirstName.Location = new System.Drawing.Point(262, 55);
+            this.lblErrorFirstName.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorFirstName.Location = new System.Drawing.Point(311, 54);
             this.lblErrorFirstName.Name = "lblErrorFirstName";
-            this.lblErrorFirstName.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorFirstName.Size = new System.Drawing.Size(0, 15);
             this.lblErrorFirstName.TabIndex = 17;
             // 
             // lblErrorLastName
             // 
             this.lblErrorLastName.AutoSize = true;
-            this.lblErrorLastName.Location = new System.Drawing.Point(262, 81);
+            this.lblErrorLastName.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorLastName.Location = new System.Drawing.Point(311, 108);
             this.lblErrorLastName.Name = "lblErrorLastName";
-            this.lblErrorLastName.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorLastName.Size = new System.Drawing.Size(0, 15);
             this.lblErrorLastName.TabIndex = 18;
             // 
             // lblErrorBirthYear
             // 
             this.lblErrorBirthYear.AutoSize = true;
-            this.lblErrorBirthYear.Location = new System.Drawing.Point(262, 107);
+            this.lblErrorBirthYear.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorBirthYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorBirthYear.Location = new System.Drawing.Point(311, 161);
             this.lblErrorBirthYear.Name = "lblErrorBirthYear";
-            this.lblErrorBirthYear.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorBirthYear.Size = new System.Drawing.Size(0, 15);
             this.lblErrorBirthYear.TabIndex = 19;
             // 
             // lblErrorPhoneNumber
             // 
             this.lblErrorPhoneNumber.AutoSize = true;
-            this.lblErrorPhoneNumber.Location = new System.Drawing.Point(277, 166);
+            this.lblErrorPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPhoneNumber.Location = new System.Drawing.Point(311, 267);
             this.lblErrorPhoneNumber.Name = "lblErrorPhoneNumber";
-            this.lblErrorPhoneNumber.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorPhoneNumber.Size = new System.Drawing.Size(0, 15);
             this.lblErrorPhoneNumber.TabIndex = 20;
             // 
             // lblErrorEmailAddress
             // 
             this.lblErrorEmailAddress.AutoSize = true;
-            this.lblErrorEmailAddress.Location = new System.Drawing.Point(277, 198);
+            this.lblErrorEmailAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorEmailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorEmailAddress.Location = new System.Drawing.Point(311, 336);
             this.lblErrorEmailAddress.Name = "lblErrorEmailAddress";
-            this.lblErrorEmailAddress.Size = new System.Drawing.Size(0, 13);
+            this.lblErrorEmailAddress.Size = new System.Drawing.Size(0, 15);
             this.lblErrorEmailAddress.TabIndex = 21;
             // 
             // grpbxPurchaseInfo
             // 
+            this.grpbxPurchaseInfo.BackColor = System.Drawing.Color.Transparent;
             this.grpbxPurchaseInfo.Controls.Add(this.pctrbxPurchase);
             this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchasePrice);
             this.grpbxPurchaseInfo.Controls.Add(this.lblPurchasePrice);
             this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchaseName);
             this.grpbxPurchaseInfo.Controls.Add(this.lblPurchaseName);
-            this.grpbxPurchaseInfo.Location = new System.Drawing.Point(435, 12);
+            this.grpbxPurchaseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpbxPurchaseInfo.Location = new System.Drawing.Point(460, 49);
             this.grpbxPurchaseInfo.Name = "grpbxPurchaseInfo";
-            this.grpbxPurchaseInfo.Size = new System.Drawing.Size(314, 371);
+            this.grpbxPurchaseInfo.Size = new System.Drawing.Size(292, 476);
             this.grpbxPurchaseInfo.TabIndex = 23;
             this.grpbxPurchaseInfo.TabStop = false;
             this.grpbxPurchaseInfo.Text = "Purchase Info";
             // 
+            // pctrbxPurchase
+            // 
+            this.pctrbxPurchase.Location = new System.Drawing.Point(28, 192);
+            this.pctrbxPurchase.Name = "pctrbxPurchase";
+            this.pctrbxPurchase.Size = new System.Drawing.Size(242, 251);
+            this.pctrbxPurchase.TabIndex = 4;
+            this.pctrbxPurchase.TabStop = false;
+            // 
+            // txtbxPurchasePrice
+            // 
+            this.txtbxPurchasePrice.Enabled = false;
+            this.txtbxPurchasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPurchasePrice.Location = new System.Drawing.Point(130, 103);
+            this.txtbxPurchasePrice.Name = "txtbxPurchasePrice";
+            this.txtbxPurchasePrice.Size = new System.Drawing.Size(140, 26);
+            this.txtbxPurchasePrice.TabIndex = 3;
+            // 
+            // lblPurchasePrice
+            // 
+            this.lblPurchasePrice.AutoSize = true;
+            this.lblPurchasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurchasePrice.Location = new System.Drawing.Point(8, 106);
+            this.lblPurchasePrice.Name = "lblPurchasePrice";
+            this.lblPurchasePrice.Size = new System.Drawing.Size(48, 20);
+            this.lblPurchasePrice.TabIndex = 2;
+            this.lblPurchasePrice.Text = "Price:";
+            // 
+            // txtbxPurchaseName
+            // 
+            this.txtbxPurchaseName.Enabled = false;
+            this.txtbxPurchaseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPurchaseName.Location = new System.Drawing.Point(130, 37);
+            this.txtbxPurchaseName.Name = "txtbxPurchaseName";
+            this.txtbxPurchaseName.Size = new System.Drawing.Size(140, 26);
+            this.txtbxPurchaseName.TabIndex = 1;
+            // 
+            // lblPurchaseName
+            // 
+            this.lblPurchaseName.AutoSize = true;
+            this.lblPurchaseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurchaseName.Location = new System.Drawing.Point(8, 40);
+            this.lblPurchaseName.Name = "lblPurchaseName";
+            this.lblPurchaseName.Size = new System.Drawing.Size(114, 20);
+            this.lblPurchaseName.TabIndex = 0;
+            this.lblPurchaseName.Text = "Product Name:";
+            // 
             // lblEmailError
             // 
             this.lblEmailError.AutoSize = true;
-            this.lblEmailError.Location = new System.Drawing.Point(277, 198);
+            this.lblEmailError.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmailError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailError.Location = new System.Drawing.Point(311, 336);
             this.lblEmailError.Name = "lblEmailError";
-            this.lblEmailError.Size = new System.Drawing.Size(0, 13);
+            this.lblEmailError.Size = new System.Drawing.Size(0, 15);
             this.lblEmailError.TabIndex = 24;
             // 
             // lblFirstNameHint
             // 
             this.lblFirstNameHint.AutoSize = true;
+            this.lblFirstNameHint.BackColor = System.Drawing.Color.Transparent;
+            this.lblFirstNameHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstNameHint.ForeColor = System.Drawing.Color.Red;
-            this.lblFirstNameHint.Location = new System.Drawing.Point(49, 55);
+            this.lblFirstNameHint.Location = new System.Drawing.Point(16, 52);
             this.lblFirstNameHint.Name = "lblFirstNameHint";
-            this.lblFirstNameHint.Size = new System.Drawing.Size(0, 13);
+            this.lblFirstNameHint.Size = new System.Drawing.Size(0, 20);
             this.lblFirstNameHint.TabIndex = 25;
             // 
             // lblLastNameHint
             // 
             this.lblLastNameHint.AutoSize = true;
+            this.lblLastNameHint.BackColor = System.Drawing.Color.Transparent;
+            this.lblLastNameHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastNameHint.ForeColor = System.Drawing.Color.Red;
-            this.lblLastNameHint.Location = new System.Drawing.Point(49, 78);
+            this.lblLastNameHint.Location = new System.Drawing.Point(16, 106);
             this.lblLastNameHint.Name = "lblLastNameHint";
-            this.lblLastNameHint.Size = new System.Drawing.Size(0, 13);
+            this.lblLastNameHint.Size = new System.Drawing.Size(0, 20);
             this.lblLastNameHint.TabIndex = 26;
             // 
             // lblBirthYearHint
             // 
             this.lblBirthYearHint.AutoSize = true;
+            this.lblBirthYearHint.BackColor = System.Drawing.Color.Transparent;
+            this.lblBirthYearHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBirthYearHint.ForeColor = System.Drawing.Color.Red;
-            this.lblBirthYearHint.Location = new System.Drawing.Point(49, 111);
+            this.lblBirthYearHint.Location = new System.Drawing.Point(16, 158);
             this.lblBirthYearHint.Name = "lblBirthYearHint";
-            this.lblBirthYearHint.Size = new System.Drawing.Size(0, 13);
+            this.lblBirthYearHint.Size = new System.Drawing.Size(0, 20);
             this.lblBirthYearHint.TabIndex = 27;
             // 
             // lblPhoneNumberHint
             // 
             this.lblPhoneNumberHint.AutoSize = true;
+            this.lblPhoneNumberHint.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumberHint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumberHint.ForeColor = System.Drawing.Color.Red;
-            this.lblPhoneNumberHint.Location = new System.Drawing.Point(49, 166);
+            this.lblPhoneNumberHint.Location = new System.Drawing.Point(16, 266);
             this.lblPhoneNumberHint.Name = "lblPhoneNumberHint";
-            this.lblPhoneNumberHint.Size = new System.Drawing.Size(0, 13);
+            this.lblPhoneNumberHint.Size = new System.Drawing.Size(0, 20);
             this.lblPhoneNumberHint.TabIndex = 28;
-            // 
-            // lblPurchaseName
-            // 
-            this.lblPurchaseName.AutoSize = true;
-            this.lblPurchaseName.Location = new System.Drawing.Point(46, 45);
-            this.lblPurchaseName.Name = "lblPurchaseName";
-            this.lblPurchaseName.Size = new System.Drawing.Size(78, 13);
-            this.lblPurchaseName.TabIndex = 0;
-            this.lblPurchaseName.Text = "Product Name:";
-            // 
-            // txtbxPurchaseName
-            // 
-            this.txtbxPurchaseName.Enabled = false;
-            this.txtbxPurchaseName.Location = new System.Drawing.Point(130, 42);
-            this.txtbxPurchaseName.Name = "txtbxPurchaseName";
-            this.txtbxPurchaseName.Size = new System.Drawing.Size(100, 20);
-            this.txtbxPurchaseName.TabIndex = 1;
-            // 
-            // lblPurchasePrice
-            // 
-            this.lblPurchasePrice.AutoSize = true;
-            this.lblPurchasePrice.Location = new System.Drawing.Point(90, 72);
-            this.lblPurchasePrice.Name = "lblPurchasePrice";
-            this.lblPurchasePrice.Size = new System.Drawing.Size(34, 13);
-            this.lblPurchasePrice.TabIndex = 2;
-            this.lblPurchasePrice.Text = "Price:";
-            // 
-            // txtbxPurchasePrice
-            // 
-            this.txtbxPurchasePrice.Enabled = false;
-            this.txtbxPurchasePrice.Location = new System.Drawing.Point(130, 69);
-            this.txtbxPurchasePrice.Name = "txtbxPurchasePrice";
-            this.txtbxPurchasePrice.Size = new System.Drawing.Size(100, 20);
-            this.txtbxPurchasePrice.TabIndex = 3;
-            // 
-            // pctrbxPurchase
-            // 
-            this.pctrbxPurchase.Location = new System.Drawing.Point(49, 121);
-            this.pctrbxPurchase.Name = "pctrbxPurchase";
-            this.pctrbxPurchase.Size = new System.Drawing.Size(242, 220);
-            this.pctrbxPurchase.TabIndex = 4;
-            this.pctrbxPurchase.TabStop = false;
             // 
             // PersonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 411);
+            this.BackgroundImage = global::View.Properties.Resources.Untitled_Artwork2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(764, 571);
             this.Controls.Add(this.lblPhoneNumberHint);
             this.Controls.Add(this.lblBirthYearHint);
             this.Controls.Add(this.lblLastNameHint);
