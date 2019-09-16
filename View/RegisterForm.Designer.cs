@@ -39,18 +39,17 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(167, 128);
+            this.btnCancel.Location = new System.Drawing.Point(200, 160);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 30);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(39, 128);
+            this.btnRegister.Location = new System.Drawing.Point(72, 160);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(109, 30);
             this.btnRegister.TabIndex = 10;
@@ -61,7 +60,7 @@
             // txtbxPassword
             // 
             this.txtbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxPassword.Location = new System.Drawing.Point(132, 78);
+            this.txtbxPassword.Location = new System.Drawing.Point(165, 110);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(144, 26);
             this.txtbxPassword.TabIndex = 9;
@@ -69,7 +68,7 @@
             // txtbxUsername
             // 
             this.txtbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxUsername.Location = new System.Drawing.Point(132, 41);
+            this.txtbxUsername.Location = new System.Drawing.Point(165, 73);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(144, 26);
             this.txtbxUsername.TabIndex = 8;
@@ -77,8 +76,9 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(35, 81);
+            this.lblPassword.Location = new System.Drawing.Point(68, 113);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(82, 20);
             this.lblPassword.TabIndex = 7;
@@ -87,8 +87,9 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(35, 44);
+            this.lblUsername.Location = new System.Drawing.Point(68, 76);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(91, 20);
             this.lblUsername.TabIndex = 6;
@@ -98,7 +99,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 201);
+            this.BackgroundImage = global::View.Properties.Resources.Untitled_Artwork_copy1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(384, 281);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtbxPassword);

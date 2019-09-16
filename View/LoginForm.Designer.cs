@@ -39,8 +39,10 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(31, 42);
+            this.lblUsername.ForeColor = System.Drawing.Color.Black;
+            this.lblUsername.Location = new System.Drawing.Point(68, 76);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(91, 20);
             this.lblUsername.TabIndex = 0;
@@ -49,8 +51,9 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(31, 79);
+            this.lblPassword.Location = new System.Drawing.Point(68, 113);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(82, 20);
             this.lblPassword.TabIndex = 1;
@@ -59,7 +62,7 @@
             // txtbxUsername
             // 
             this.txtbxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxUsername.Location = new System.Drawing.Point(128, 39);
+            this.txtbxUsername.Location = new System.Drawing.Point(165, 73);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(144, 26);
             this.txtbxUsername.TabIndex = 2;
@@ -67,7 +70,7 @@
             // txtbxPassword
             // 
             this.txtbxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxPassword.Location = new System.Drawing.Point(128, 76);
+            this.txtbxPassword.Location = new System.Drawing.Point(165, 110);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(144, 26);
             this.txtbxPassword.TabIndex = 3;
@@ -75,7 +78,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(35, 126);
+            this.btnRegister.Location = new System.Drawing.Point(72, 160);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(109, 30);
             this.btnRegister.TabIndex = 4;
@@ -86,7 +89,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(163, 126);
+            this.btnLogin.Location = new System.Drawing.Point(200, 160);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(109, 30);
             this.btnLogin.TabIndex = 5;
@@ -98,7 +101,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 201);
+            this.BackgroundImage = global::View.Properties.Resources.Untitled_Artwork_copy1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(384, 281);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtbxPassword);
