@@ -105,6 +105,7 @@ namespace View
             decimal price = unitPrice - discount;
             Ref_PersonForm.txtbxPurchaseName.Text = name;
             Ref_PersonForm.txtbxPurchasePrice.Text = price.ToString();
+            //Ref_PersonForm.pctrbxPurchase
             Ref_PersonForm.Show();
         }
     }

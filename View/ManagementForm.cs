@@ -271,5 +271,10 @@ namespace View
             byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
             return bytes;
         }
+
+        private void GrpbxProducts_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

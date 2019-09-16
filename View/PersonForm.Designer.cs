@@ -60,8 +60,10 @@
             this.txtbxPurchaseName = new System.Windows.Forms.TextBox();
             this.lblPurchasePrice = new System.Windows.Forms.Label();
             this.txtbxPurchasePrice = new System.Windows.Forms.TextBox();
+            this.pctrbxPurchase = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.grpbxPurchaseInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxPurchase)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFirstName
@@ -223,6 +225,7 @@
             // 
             // grpbxPurchaseInfo
             // 
+            this.grpbxPurchaseInfo.Controls.Add(this.pctrbxPurchase);
             this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchasePrice);
             this.grpbxPurchaseInfo.Controls.Add(this.lblPurchasePrice);
             this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchaseName);
@@ -281,7 +284,7 @@
             // lblPurchaseName
             // 
             this.lblPurchaseName.AutoSize = true;
-            this.lblPurchaseName.Location = new System.Drawing.Point(63, 39);
+            this.lblPurchaseName.Location = new System.Drawing.Point(46, 45);
             this.lblPurchaseName.Name = "lblPurchaseName";
             this.lblPurchaseName.Size = new System.Drawing.Size(78, 13);
             this.lblPurchaseName.TabIndex = 0;
@@ -290,7 +293,7 @@
             // txtbxPurchaseName
             // 
             this.txtbxPurchaseName.Enabled = false;
-            this.txtbxPurchaseName.Location = new System.Drawing.Point(147, 36);
+            this.txtbxPurchaseName.Location = new System.Drawing.Point(130, 42);
             this.txtbxPurchaseName.Name = "txtbxPurchaseName";
             this.txtbxPurchaseName.Size = new System.Drawing.Size(100, 20);
             this.txtbxPurchaseName.TabIndex = 1;
@@ -298,7 +301,7 @@
             // lblPurchasePrice
             // 
             this.lblPurchasePrice.AutoSize = true;
-            this.lblPurchasePrice.Location = new System.Drawing.Point(107, 66);
+            this.lblPurchasePrice.Location = new System.Drawing.Point(90, 72);
             this.lblPurchasePrice.Name = "lblPurchasePrice";
             this.lblPurchasePrice.Size = new System.Drawing.Size(34, 13);
             this.lblPurchasePrice.TabIndex = 2;
@@ -307,10 +310,18 @@
             // txtbxPurchasePrice
             // 
             this.txtbxPurchasePrice.Enabled = false;
-            this.txtbxPurchasePrice.Location = new System.Drawing.Point(147, 63);
+            this.txtbxPurchasePrice.Location = new System.Drawing.Point(130, 69);
             this.txtbxPurchasePrice.Name = "txtbxPurchasePrice";
             this.txtbxPurchasePrice.Size = new System.Drawing.Size(100, 20);
             this.txtbxPurchasePrice.TabIndex = 3;
+            // 
+            // pctrbxPurchase
+            // 
+            this.pctrbxPurchase.Location = new System.Drawing.Point(49, 121);
+            this.pctrbxPurchase.Name = "pctrbxPurchase";
+            this.pctrbxPurchase.Size = new System.Drawing.Size(242, 220);
+            this.pctrbxPurchase.TabIndex = 4;
+            this.pctrbxPurchase.TabStop = false;
             // 
             // PersonForm
             // 
@@ -348,6 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.grpbxPurchaseInfo.ResumeLayout(false);
             this.grpbxPurchaseInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctrbxPurchase)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,5 +397,6 @@
         private System.Windows.Forms.Label lblPurchaseName;
         public System.Windows.Forms.TextBox txtbxPurchasePrice;
         public System.Windows.Forms.TextBox txtbxPurchaseName;
+        public System.Windows.Forms.PictureBox pctrbxPurchase;
     }
 }

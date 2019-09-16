@@ -125,11 +125,6 @@ namespace View
                     lblErrorBirthYear.Text = string.Empty;
                 }
             }
-            if (Convert.ToInt32(txtbxBirthYear.Text) > 2019 || Convert.ToInt32(txtbxBirthYear.Text) < 0)
-            {
-                MessageBox.Show("Invalid Date", "Error");
-                txtbxBirthYear.Text = string.Empty;
-            }
         }
         #endregion
 

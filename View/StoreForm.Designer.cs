@@ -88,7 +88,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::View.Properties.Resources.Untitled_Artwork_copy;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(764, 579);
+            this.ClientSize = new System.Drawing.Size(764, 571);
             this.Controls.Add(this.btnManagement);
             this.Controls.Add(this.btnPurchase);
             this.Controls.Add(this.dgvProducts);
