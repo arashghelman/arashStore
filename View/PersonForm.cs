@@ -30,6 +30,7 @@ namespace View
             cmbbxSex.Items.AddRange(new string[] { "Male", "Female" });
             AssignToolTip();
             SetMandatoryHint();
+            pctrbxPurchase.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         #endregion
 
