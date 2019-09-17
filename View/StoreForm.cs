@@ -105,10 +105,19 @@ namespace View
             decimal price = unitPrice - discount;
             Ref_PersonForm.txtbxPurchaseName.Text = name;
             Ref_PersonForm.txtbxPurchasePrice.Text = price.ToString();
-            //Ref_PersonForm.pctrbxPurchase.Image = Convert.ToByte(dgvProducts.CurrentRow.Cells[4].Value);
+            //Ref_PersonForm.InsertToPictureBox(dgvProducts.CurrentRow.Cells[4].Value);
+            // MemoryStream ms = Ref_PersonForm.InsertToPictureBox(dgvProducts.CurrentRow.Cells[4].Value);
+            // Ref_PersonForm.pctrbxPurchase.Image = Image.FromStream(ms);
+            //Ref_PersonForm.pctrbxPurchase.Image = (Image) dgvProducts.CurrentRow.Cells[4].Value;
+            // byte[] data = (byte[])dt.Rows[0]["IMAGE"];
+            byte[] data = (byte[])dgvProducts.CurrentRow.Cells[4].Value;
+
+            MemoryStream ms = new MemoryStream(data);
+            Ref_PersonForm.pctrbxPurchase.Image = Image.FromStream(ms);
+            Ref_PersonForm.pctrbxPurchase.SizeMode = PictureBoxSizeMode.StretchImage;
             Ref_PersonForm.Show();
         }
-
+        
         public static Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream mStream = new MemoryStream();

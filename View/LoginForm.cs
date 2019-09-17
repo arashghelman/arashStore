@@ -42,7 +42,8 @@ namespace View
                     MessageBox.Show("You are successfully logged in", "Success");
                     ManagementForm Ref_ManagementForm = new ManagementForm();
                     LoginForm Ref_LoginForm = new LoginForm();
-                    Ref_LoginForm.Close();//doesn't work.
+                   // Ref_LoginForm.Close();//doesn't work.
+                    this.Close();
                     Ref_ManagementForm.Show();
                 }
                 else

@@ -25,6 +25,7 @@ namespace View
         #region [- props -]
         public ViewModel.PersonViewModel Ref_PersonViewModel { get; set; }
         public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
+        public object ImageValue { get; set; }
         #endregion
 
         #region [- ManagementForm_Load -]
@@ -44,7 +45,8 @@ namespace View
             nmrcUpDwnProductQuantity.Value = decimal.Parse(dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString());             
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
-            lblFileName.Text = dgvProducts.Rows[e.RowIndex].Cells[4].Value.ToString();
+            //  lblFileName.Text = dgvProducts.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ImageValue = dgvProducts.Rows[e.RowIndex].Cells[4].Value;
         }
         #endregion
 
@@ -107,15 +109,30 @@ namespace View
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to change product info?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogResult==DialogResult.Yes)
             {
-                MessageBox.Show("Changes are added.");
-                Ref_ProductViewModel.Edit(
-                    Convert.ToInt32(lblShowProductCode.Text),
-                    txtbxProductName.Text,
-                    Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
-                    Convert.ToDecimal(txtbxProductDiscount.Text),
-                    Convert.ToDecimal(txtbxProductUnitPrice.Text),
-                    AddImage()
-                    );
+                if (lblFileName.Text != "")
+                {
+                    MessageBox.Show("Changes are added.");
+                    Ref_ProductViewModel.Edit(
+                        Convert.ToInt32(lblShowProductCode.Text),
+                        txtbxProductName.Text,
+                        Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
+                        Convert.ToDecimal(txtbxProductDiscount.Text),
+                        Convert.ToDecimal(txtbxProductUnitPrice.Text),
+                        AddImage()
+                        );
+                }
+                else
+                {
+                    MessageBox.Show("Changes are added.");
+                    Ref_ProductViewModel.Edit(
+                        Convert.ToInt32(lblShowProductCode.Text),
+                        txtbxProductName.Text,
+                        Convert.ToInt32(nmrcUpDwnProductQuantity.Value),
+                        Convert.ToDecimal(txtbxProductDiscount.Text),
+                        Convert.ToDecimal(txtbxProductUnitPrice.Text),
+                        UpdateImage(ImageValue)
+                        );
+                }
                 RefreshProductsGridView();
                 EmptyProductFields();
             }
@@ -140,6 +157,18 @@ namespace View
                 BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
                 byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
                 return imageByte;
+        }
+
+        private byte[] UpdateImage(object image)
+        {
+            byte[] data = (byte[])image;
+            // MemoryStream ms = new MemoryStream(data);
+            // pictureBox1.Image = Image.FromStream(ms);
+            //FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
+            //BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
+            // byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
+            //  return imageByte;
+            return data;
         }
         #endregion
 

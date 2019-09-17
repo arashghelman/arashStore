@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace View
 {
@@ -207,8 +209,17 @@ namespace View
             lblLastNameHint.Text = hint;
             lblPhoneNumberHint.Text = hint;
             lblBirthYearHint.Text = hint;
-        } 
+        }
         #endregion
+
+        public MemoryStream InsertToPictureBox(object datagridviewValue)
+        {
+            MemoryStream ms = new MemoryStream();
+            Bitmap img = (Bitmap)datagridviewValue;
+            img.Save(ms, ImageFormat.Jpeg);
+            // pctrbxPurchase.Image = Image.FromStream(ms);
+            return ms;
+        }
 
     }    
 
