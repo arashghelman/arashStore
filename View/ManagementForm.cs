@@ -158,16 +158,12 @@ namespace View
                 byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
                 return imageByte;
         }
+        #endregion
 
+        #region [- UpdateImage(object image) -]
         private byte[] UpdateImage(object image)
         {
-            byte[] data = (byte[])image;
-            // MemoryStream ms = new MemoryStream(data);
-            // pictureBox1.Image = Image.FromStream(ms);
-            //FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-            //BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-            // byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-            //  return imageByte;
+            byte[] data = (byte[])image;           
             return data;
         }
         #endregion
@@ -284,17 +280,6 @@ namespace View
         }
         #endregion
 
-        #endregion
-
-
-
-
-
-
-        private byte[] ConvertToByte()
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
-            return bytes;
-        }
+        #endregion       
     }
 }

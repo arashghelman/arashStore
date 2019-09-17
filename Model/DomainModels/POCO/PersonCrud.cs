@@ -46,9 +46,9 @@ namespace Model.DomainModels.POCO
                     context.People.Add(Ref_Person);
                     context.SaveChanges();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.WriteLine(ex.Message);
+                    throw new Exception();
                 }
                 finally
                 {
@@ -76,10 +76,10 @@ namespace Model.DomainModels.POCO
                 {
                     throw new ArgumentNullException();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
-                    Console.WriteLine(ex.Message);
+                    throw new Exception();
                 }
                 finally
                 {

@@ -13,19 +13,26 @@ namespace View
 {
     public partial class StoreForm : Form
     {
+        #region [- ctor -]
         public StoreForm()
         {
             InitializeComponent();
             Ref_ProductViewModel = new ViewModel.ProductViewModel();
         }
-        public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
+        #endregion
 
+        #region [- props -]
+        public ViewModel.ProductViewModel Ref_ProductViewModel { get; set; }
+        #endregion
+
+        #region [- StoreForm_Load -]
         private void StoreForm_Load(object sender, EventArgs e)
         {
             dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
             HideColumns();
             StretchImageLayout();
-        }
+        } 
+        #endregion
 
         #region [- HideColumns() -]
         private void HideColumns()

@@ -33,10 +33,12 @@ namespace ViewModel
         }
         #endregion
 
+        #region [- Edit(int code, string name, int quantity, decimal discount, decimal unitPrice, byte[] image) -]
         public void Edit(int code, string name, int quantity, decimal discount, decimal unitPrice, byte[] image)
         {
             Ref_ProductCrud.Update(code, name, quantity, discount, unitPrice, image);
-        }
+        } 
+        #endregion
 
         #region [- Refresh() -]
         public dynamic Refresh()
