@@ -105,7 +105,7 @@ namespace View
             decimal price = unitPrice - discount;
             Ref_PersonForm.txtbxPurchaseName.Text = name;
             Ref_PersonForm.txtbxPurchasePrice.Text = price.ToString();
-            //Ref_PersonForm.pctrbxPurchase.Image = ConvertToImage(dgvProducts.CurrentRow.Cells[4].Value);
+            //Ref_PersonForm.pctrbxPurchase.Image = Convert.ToByte(dgvProducts.CurrentRow.Cells[4].Value);
             Ref_PersonForm.Show();
         }
 

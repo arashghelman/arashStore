@@ -44,6 +44,7 @@ namespace View
             nmrcUpDwnProductQuantity.Value = decimal.Parse(dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString());             
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
+            lblFileName.Text = dgvProducts.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         #endregion
 
@@ -135,10 +136,10 @@ namespace View
         #region [- AddImage() -]
         private byte[] AddImage()
         {
-            FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-            BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-            byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-            return imageByte;
+                FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
+                BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
+                byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
+                return imageByte;
         }
         #endregion
 
