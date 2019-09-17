@@ -77,7 +77,7 @@ namespace View
             {
                 if (row.Index == i)
                 {
-                    row.DefaultCellStyle.BackColor = Color.LightPink;
+                    row.DefaultCellStyle.BackColor = Color.LightBlue;
                 }
                 if (row.Index == j)
                 {
@@ -105,8 +105,19 @@ namespace View
             decimal price = unitPrice - discount;
             Ref_PersonForm.txtbxPurchaseName.Text = name;
             Ref_PersonForm.txtbxPurchasePrice.Text = price.ToString();
-            //Ref_PersonForm.pctrbxPurchase
+            //Ref_PersonForm.pctrbxPurchase.Image = ConvertToImage(dgvProducts.CurrentRow.Cells[4].Value);
             Ref_PersonForm.Show();
         }
+
+        public static Bitmap ByteToImage(byte[] blob)
+        {
+            MemoryStream mStream = new MemoryStream();
+            byte[] pData = blob;
+            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+            Bitmap bm = new Bitmap(mStream, false);
+            mStream.Dispose();
+            return bm;
+        }
+
     }
 }

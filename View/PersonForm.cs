@@ -124,6 +124,14 @@ namespace View
                     errorProvider1.Clear();
                     lblErrorBirthYear.Text = string.Empty;
                 }
+                int temp ;
+                bool time = Int32.TryParse(txtbxBirthYear.Text, out temp);
+                string warning = "invalid date!";
+                if (temp > 2020 || temp < 0)
+                {
+                    lblErrorBirthYear.Text = warning;
+                    errorProvider1.SetError(txtbxBirthYear, lblErrorBirthYear.Text);
+                }
             }
         }
         #endregion
@@ -174,8 +182,6 @@ namespace View
 
         #endregion
 
-
-
         #region [- BtnAdd_Click -]
         private void BtnAdd_Click(object sender, EventArgs e)
         {
@@ -188,6 +194,8 @@ namespace View
                 txtbxPhoneNumber.Text,
                 txtbxEmailAddress.Text
                 );
+            MessageBox.Show("You've successfully purchased this product", "Success");
+            Application.Exit();
         }
         #endregion
 
@@ -202,42 +210,7 @@ namespace View
         } 
         #endregion
 
-
-
-
-
-        private void ShowPurchaseMessage(string message)
-        {
-            
-        }
-
-        private void TxtbxPhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
-
-
-        //public void DetectEachChar(string text, string hint)
-        //{
-        //    bool hasDigit = false;
-        //    foreach (char letter in text)
-        //    {
-        //        if (char.IsDigit(letter))
-        //        {
-        //            hasDigit = true;
-        //        }
-        //        if (hasDigit)
-        //        {
-        //            hint = "You should only enter characters!";
-        //            errorProvider1.SetError(,hint);
-        //        }
-        //        else
-        //        {
-        //            errorProvider1.Clear();
-        //        }
-        //    }
-        //}
+    }    
 
     }
 

@@ -160,11 +160,6 @@ namespace View
         }
         #endregion
 
-        private void TxtbxProductUnitPrice_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         #endregion
 
         #region [- Manage People -]
@@ -270,11 +265,6 @@ namespace View
         {
             byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
             return bytes;
-        }
-
-        private void GrpbxProducts_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

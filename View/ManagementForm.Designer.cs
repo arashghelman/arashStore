@@ -142,7 +142,6 @@
             this.txtbxProductUnitPrice.Name = "txtbxProductUnitPrice";
             this.txtbxProductUnitPrice.Size = new System.Drawing.Size(117, 26);
             this.txtbxProductUnitPrice.TabIndex = 9;
-            this.txtbxProductUnitPrice.TextChanged += new System.EventHandler(this.TxtbxProductUnitPrice_TextChanged);
             // 
             // nmrcUpDwnProductQuantity
             // 
@@ -220,7 +219,6 @@
             this.grpbxProducts.TabIndex = 14;
             this.grpbxProducts.TabStop = false;
             this.grpbxProducts.Text = "Manage Products";
-            this.grpbxProducts.Enter += new System.EventHandler(this.GrpbxProducts_Enter);
             // 
             // lblShowProductCode
             // 
@@ -492,7 +490,7 @@
             this.Controls.Add(this.grpbxProducts);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManagementForm";
-            this.Text = "Store Management";
+            this.Text = "Management";
             this.Load += new System.EventHandler(this.ManagementForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmrcUpDwnProductQuantity)).EndInit();
             this.grpbxProducts.ResumeLayout(false);

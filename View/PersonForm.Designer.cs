@@ -166,7 +166,6 @@
             this.txtbxPhoneNumber.Name = "txtbxPhoneNumber";
             this.txtbxPhoneNumber.Size = new System.Drawing.Size(123, 26);
             this.txtbxPhoneNumber.TabIndex = 9;
-            this.txtbxPhoneNumber.TextChanged += new System.EventHandler(this.TxtbxPhoneNumber_TextChanged);
             this.txtbxPhoneNumber.Leave += new System.EventHandler(this.TxtbxPhoneNumber_Leave);
             // 
             // txtbxEmailAddress
@@ -271,7 +270,7 @@
             // 
             // pctrbxPurchase
             // 
-            this.pctrbxPurchase.Location = new System.Drawing.Point(28, 192);
+            this.pctrbxPurchase.Location = new System.Drawing.Point(28, 204);
             this.pctrbxPurchase.Name = "pctrbxPurchase";
             this.pctrbxPurchase.Size = new System.Drawing.Size(242, 251);
             this.pctrbxPurchase.TabIndex = 4;
@@ -402,7 +401,7 @@
             this.Controls.Add(this.lblFirstName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonForm";
-            this.Text = "PersonForm";
+            this.Text = "Purchase";
             this.Load += new System.EventHandler(this.PersonForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.grpbxPurchaseInfo.ResumeLayout(false);

@@ -95,7 +95,7 @@
             this.Controls.Add(this.dgvProducts);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StoreForm";
-            this.Text = "Store Form";
+            this.Text = "Store ";
             this.Load += new System.EventHandler(this.StoreForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productViewModelBindingSource)).EndInit();

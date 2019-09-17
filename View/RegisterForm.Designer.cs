@@ -45,6 +45,7 @@
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnRegister
             // 
@@ -109,7 +110,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
