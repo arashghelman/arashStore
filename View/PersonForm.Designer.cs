@@ -271,7 +271,6 @@
             // 
             // pctrbxPurchase
             // 
-            this.pctrbxPurchase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctrbxPurchase.Location = new System.Drawing.Point(28, 204);
             this.pctrbxPurchase.Name = "pctrbxPurchase";
             this.pctrbxPurchase.Size = new System.Drawing.Size(242, 251);

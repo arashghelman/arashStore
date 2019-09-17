@@ -40,8 +40,10 @@ namespace View
                 if (username == txtbxUsername.Text && password == txtbxPassword.Text) 
                 {
                     MessageBox.Show("You are successfully logged in", "Success");
-                    Close();
-                    ManagementForm Ref_ManagementForm = new ManagementForm();               
+                    ManagementForm Ref_ManagementForm = new ManagementForm();
+                    LoginForm Ref_LoginForm = new LoginForm();
+                   // Ref_LoginForm.Close();//doesn't work.
+                    this.Close();
                     Ref_ManagementForm.Show();
                 }
                 else

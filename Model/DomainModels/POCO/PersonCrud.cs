@@ -19,8 +19,8 @@ namespace Model.DomainModels.POCO
         public DTO.EF.Person Ref_Person { get; set; }
         #endregion
 
-        #region [- public int GetAge(int birthYear) -]
-        public int GetAge(int birthYear)
+        #region [- public int CalculateAge(int birthYear) -]
+        public int CalculateAge(int birthYear)
         {
             int currentYear = 2019;
             int age = currentYear - birthYear;
@@ -38,7 +38,7 @@ namespace Model.DomainModels.POCO
                     Ref_Person.FirstName = firstName;
                     Ref_Person.LastName = lastName;
                     Ref_Person.BirthYear = birthYear;
-                    Ref_Person.Age = GetAge(birthYear);
+                    Ref_Person.Age = CalculateAge(birthYear);
                     Ref_Person.Sex = sex;
                     Ref_Person.PhoneNumber = phoneNumber;
                     Ref_Person.EmailAddress = emailAddress;
@@ -76,10 +76,10 @@ namespace Model.DomainModels.POCO
                 {
                     throw new ArgumentNullException();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
 
-                    throw new Exception();
+                    Console.WriteLine(ex.Message);
                 }
                 finally
                 {
@@ -105,7 +105,7 @@ namespace Model.DomainModels.POCO
                         q.FirstName = firstName;
                         q.LastName = lastName;
                         q.BirthYear = birthYear;
-                        q.Age = GetAge(birthYear);
+                        q.Age = CalculateAge(birthYear);
                         q.Sex = sex;
                         q.PhoneNumber = phoneNumber;
                         q.EmailAddress = emailAddress;

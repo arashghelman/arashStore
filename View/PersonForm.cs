@@ -126,7 +126,7 @@ namespace View
                     errorProvider1.Clear();
                     lblErrorBirthYear.Text = string.Empty;
                 }
-                int temp;
+                int temp ;
                 bool time = Int32.TryParse(txtbxBirthYear.Text, out temp);
                 string warning = "invalid date!";
                 if (temp > 2020 || temp < 0)
@@ -212,8 +212,17 @@ namespace View
         }
         #endregion
 
-    }
-}
+        public MemoryStream InsertToPictureBox(object datagridviewValue)
+        {
+            MemoryStream ms = new MemoryStream();
+            Bitmap img = (Bitmap)datagridviewValue;
+            img.Save(ms, ImageFormat.Jpeg);
+            // pctrbxPurchase.Image = Image.FromStream(ms);
+            return ms;
+        }
 
+    }    
+
+    }
 
 
