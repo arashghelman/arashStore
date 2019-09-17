@@ -45,7 +45,6 @@ namespace View
             nmrcUpDwnProductQuantity.Value = decimal.Parse(dgvProducts.Rows[e.RowIndex].Cells[2].Value.ToString());             
             txtbxProductUnitPrice.Text = dgvProducts.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtbxProductDiscount.Text = dgvProducts.Rows[e.RowIndex].Cells[5].Value.ToString();
-            //  lblFileName.Text = dgvProducts.Rows[e.RowIndex].Cells[4].Value.ToString();
             ImageValue = dgvProducts.Rows[e.RowIndex].Cells[4].Value;
         }
         #endregion
@@ -79,8 +78,7 @@ namespace View
             if (dialogResult==DialogResult.No)
             {
                 EmptyProductFields();
-            }
-            
+            }           
         }
         #endregion
 
@@ -158,16 +156,12 @@ namespace View
                 byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
                 return imageByte;
         }
+        #endregion
 
+        #region [- UpdateImage() -]
         private byte[] UpdateImage(object image)
         {
             byte[] data = (byte[])image;
-            // MemoryStream ms = new MemoryStream(data);
-            // pictureBox1.Image = Image.FromStream(ms);
-            //FileStream Ref_FileStream = new FileStream(lblFileName.Text, FileMode.Open, FileAccess.Read);
-            //BinaryReader Ref_BinaryReader = new BinaryReader(Ref_FileStream);
-            // byte[] imageByte = Ref_BinaryReader.ReadBytes((int)Ref_FileStream.Length);
-            //  return imageByte;
             return data;
         }
         #endregion
@@ -285,16 +279,5 @@ namespace View
         #endregion
 
         #endregion
-
-
-
-
-
-
-        private byte[] ConvertToByte()
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(lblFileName.Text);
-            return bytes;
-        }
     }
 }
