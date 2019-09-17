@@ -255,6 +255,7 @@
             // grpbxPurchaseInfo
             // 
             this.grpbxPurchaseInfo.BackColor = System.Drawing.Color.Transparent;
+            this.grpbxPurchaseInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.grpbxPurchaseInfo.Controls.Add(this.pctrbxPurchase);
             this.grpbxPurchaseInfo.Controls.Add(this.txtbxPurchasePrice);
             this.grpbxPurchaseInfo.Controls.Add(this.lblPurchasePrice);
