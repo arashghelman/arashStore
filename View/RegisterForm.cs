@@ -37,8 +37,7 @@ namespace View
                 streamWriter.Close();
             }
             MessageBox.Show("You're successfully registered", "Success");
-            RegisterForm Ref_RegisterForm = new RegisterForm();
-            Ref_RegisterForm.Close();//doesn't work
+            Close();
         }
         #endregion
 

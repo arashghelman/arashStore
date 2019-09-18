@@ -32,6 +32,7 @@ namespace View
         private void ManagementForm_Load(object sender, EventArgs e)
         {
             cmbbxPersonSex.Items.AddRange(new string[] { "Male", "Female" });
+            StretchImageLayout();
         }
         #endregion
 
@@ -184,6 +185,18 @@ namespace View
         {
             dgvProducts.DataSource = Ref_ProductViewModel.Refresh();
         }
+        #endregion
+
+        #region [- StretchImageLayout -]
+        private void StretchImageLayout()
+        {
+            for (int i = 0; i < dgvProducts.Columns.Count; i++)
+                if (dgvProducts.Columns[i] is DataGridViewImageColumn)
+                {
+                    ((DataGridViewImageColumn)dgvProducts.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    break;
+                }
+        } 
         #endregion
 
         #endregion

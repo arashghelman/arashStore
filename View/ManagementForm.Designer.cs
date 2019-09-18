@@ -242,7 +242,7 @@
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Location = new System.Drawing.Point(6, 312);
             this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.RowTemplate.Height = 40;
+            this.dgvProducts.RowTemplate.Height = 60;
             this.dgvProducts.Size = new System.Drawing.Size(355, 229);
             this.dgvProducts.TabIndex = 17;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducts_CellClick);
@@ -412,6 +412,7 @@
             this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerson.Location = new System.Drawing.Point(7, 312);
             this.dgvPerson.Name = "dgvPerson";
+            this.dgvPerson.RowTemplate.Height = 30;
             this.dgvPerson.Size = new System.Drawing.Size(355, 229);
             this.dgvPerson.TabIndex = 26;
             this.dgvPerson.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPerson_CellClick);
