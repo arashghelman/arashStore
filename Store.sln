@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\View
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{8D935C64-75FB-40F2-9E55-2FA4C48F37F3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{06F33E66-7EAD-4AE6-9574-48431679EAA4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A218684B-4996-4B59-B757-E0CF889BE7B7}"
 	ProjectSection(SolutionItems) = preProject
 		C:\Store Backup\Store_2019.bak = C:\Store Backup\Store_2019.bak
 	EndProjectSection
