@@ -46,7 +46,7 @@
             this.dgvProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.dgvProducts.Location = new System.Drawing.Point(62, 102);
             this.dgvProducts.Name = "dgvProducts";
-            this.dgvProducts.RowTemplate.Height = 60;
+            this.dgvProducts.RowTemplate.Height = 80;
             this.dgvProducts.Size = new System.Drawing.Size(435, 410);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.Click += new System.EventHandler(this.DgvProducts_Click);
